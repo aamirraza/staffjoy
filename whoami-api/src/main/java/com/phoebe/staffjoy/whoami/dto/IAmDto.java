@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import xyz.staffjoy.company.dto.AdminOfList;
-import xyz.staffjoy.company.dto.WorkerOfList;
+import com.phoebe.staffjoy.company.dto.AdminOfList;
+import com.phoebe.staffjoy.company.dto.WorkerOfList;
 
 @Data
 @NoArgsConstructor

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients(basePackages = {"xyz.staffjoy.account", "xyz.staffjoy.company", "xyz.staffjoy.mail"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.account", "com.phoebe.staffjoy.company", "com.phoebe.staffjoy.mail"})
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class WebApplication {
     public static void main(String[] args) {

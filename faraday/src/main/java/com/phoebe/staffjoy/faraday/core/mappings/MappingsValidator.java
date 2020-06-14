@@ -1,7 +1,7 @@
 package com.phoebe.staffjoy.faraday.core.mappings;
 
-import xyz.staffjoy.faraday.config.MappingProperties;
-import xyz.staffjoy.faraday.exceptions.FaradayException;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.exceptions.FaradayException;
 
 import java.util.ArrayList;
 import java.util.List;

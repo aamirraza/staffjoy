@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import xyz.staffjoy.common.api.ResultCode;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.auth.AuthContext;
-import xyz.staffjoy.common.auth.Authorize;
-import xyz.staffjoy.company.dto.*;
-import xyz.staffjoy.company.service.PermissionService;
-import xyz.staffjoy.company.service.TeamService;
+import com.phoebe.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthContext;
+import com.phoebe.staffjoy.common.auth.Authorize;
+import com.phoebe.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.company.service.PermissionService;
+import com.phoebe.staffjoy.company.service.TeamService;
 
 @RestController
 @RequestMapping("/v1/company/team")

@@ -5,7 +5,7 @@ import org.springframework.http.HttpMethod;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static xyz.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
+import static com.phoebe.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
 
 public class UnmodifiableRequestData {
 

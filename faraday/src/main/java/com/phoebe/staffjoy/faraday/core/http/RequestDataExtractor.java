@@ -2,7 +2,7 @@ package com.phoebe.staffjoy.faraday.core.http;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import xyz.staffjoy.faraday.exceptions.FaradayException;
+import com.phoebe.staffjoy.faraday.exceptions.FaradayException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;

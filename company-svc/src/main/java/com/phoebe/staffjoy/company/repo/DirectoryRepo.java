@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import xyz.staffjoy.company.model.Directory;
+import com.phoebe.staffjoy.company.model.Directory;
 
 @Repository
 public interface DirectoryRepo extends JpaRepository<Directory, String> {

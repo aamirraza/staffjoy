@@ -6,16 +6,16 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import xyz.staffjoy.common.api.ResultCode;
-import xyz.staffjoy.common.auditlog.LogEntry;
-import xyz.staffjoy.common.auth.AuthContext;
-import xyz.staffjoy.common.error.ServiceException;
-import xyz.staffjoy.company.dto.ShiftDto;
-import xyz.staffjoy.company.model.Shift;
-import xyz.staffjoy.company.repo.ShiftRepo;
-import xyz.staffjoy.company.service.DirectoryService;
-import xyz.staffjoy.company.service.JobService;
-import xyz.staffjoy.company.service.TeamService;
+import com.phoebe.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.auditlog.LogEntry;
+import com.phoebe.staffjoy.common.auth.AuthContext;
+import com.phoebe.staffjoy.common.error.ServiceException;
+import com.phoebe.staffjoy.company.dto.ShiftDto;
+import com.phoebe.staffjoy.company.model.Shift;
+import com.phoebe.staffjoy.company.repo.ShiftRepo;
+import com.phoebe.staffjoy.company.service.DirectoryService;
+import com.phoebe.staffjoy.company.service.JobService;
+import com.phoebe.staffjoy.company.service.TeamService;
 
 @Component
 public class ShiftHelper {

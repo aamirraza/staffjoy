@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import xyz.staffjoy.company.model.Shift;
+import com.phoebe.staffjoy.company.model.Shift;
 
 import java.time.Instant;
 import java.util.List;

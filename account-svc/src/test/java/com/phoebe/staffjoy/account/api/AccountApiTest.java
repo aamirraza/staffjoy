@@ -36,7 +36,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@EnableFeignClients(basePackages = {"xyz.staffjoy.account.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.account.client"})
 @Import(TestConfig.class)
 @Slf4j
 public class AccountApiTest {

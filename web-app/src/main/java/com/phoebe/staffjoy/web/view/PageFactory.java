@@ -2,7 +2,7 @@ package com.phoebe.staffjoy.web.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.staffjoy.common.config.StaffjoyProps;
+import com.phoebe.staffjoy.common.config.StaffjoyProps;
 import com.phoebe.staffjoy.web.props.AppProps;
 
 @Component

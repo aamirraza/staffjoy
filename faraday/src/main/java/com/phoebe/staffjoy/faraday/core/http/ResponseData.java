@@ -4,8 +4,8 @@ import com.phoebe.staffjoy.faraday.core.utils.BodyConverter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 
-import static xyz.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
-import static xyz.staffjoy.faraday.core.utils.BodyConverter.convertStringToBody;
+import static com.phoebe.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
+import static com.phoebe.staffjoy.faraday.core.utils.BodyConverter.convertStringToBody;
 
 public class ResponseData {
     protected HttpStatus status;

@@ -13,13 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.crypto.Hash;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.crypto.Hash;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.*;
 import com.phoebe.staffjoy.whoami.client.WhoAmIClient;
 import com.phoebe.staffjoy.whoami.dto.FindWhoAmIResponse;
 import com.phoebe.staffjoy.whoami.dto.GetIntercomSettingResponse;
@@ -35,7 +35,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //@DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.whoami.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.whoami.client"})
 @Slf4j
 public class WhoAmIControllerTest {
     @Autowired

@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import xyz.staffjoy.common.validation.DayOfWeek;
-import xyz.staffjoy.common.validation.Timezone;
+import com.phoebe.staffjoy.common.validation.DayOfWeek;
+import com.phoebe.staffjoy.common.validation.Timezone;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;

@@ -2,7 +2,7 @@ package com.phoebe.staffjoy.common.auth;
 
 import com.phoebe.staffjoy.common.api.ResultCode;
 import lombok.Getter;
-import xyz.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.api.ResultCode;
 
 public class PermissionDeniedException extends RuntimeException {
 

@@ -5,9 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
-import xyz.staffjoy.common.validation.DayOfWeek;
-import xyz.staffjoy.common.validation.Group1;
-import xyz.staffjoy.common.validation.Timezone;
+import com.phoebe.staffjoy.common.validation.DayOfWeek;
+import com.phoebe.staffjoy.common.validation.Group1;
+import com.phoebe.staffjoy.common.validation.Timezone;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

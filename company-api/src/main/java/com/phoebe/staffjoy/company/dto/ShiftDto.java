@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 
 import java.time.Instant;
 
-import static xyz.staffjoy.company.dto.CreateShiftRequest.MAX_SHIFT_DURATION;
+import static com.phoebe.staffjoy.company.dto.CreateShiftRequest.MAX_SHIFT_DURATION;
 
 @Data
 @AllArgsConstructor

@@ -3,9 +3,9 @@ package com.phoebe.staffjoy.faraday.core.mappings;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
-import xyz.staffjoy.faraday.config.FaradayProperties;
-import xyz.staffjoy.faraday.config.MappingProperties;
-import xyz.staffjoy.faraday.core.http.HttpClientProvider;
+import com.phoebe.staffjoy.faraday.config.FaradayProperties;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.core.http.HttpClientProvider;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;

@@ -5,11 +5,11 @@ import com.github.structlog4j.SLoggerFactory;
 import io.sentry.SentryClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.env.EnvConfig;
-import xyz.staffjoy.common.error.ServiceException;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.common.error.ServiceException;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.*;
 import com.phoebe.staffjoy.ical.model.Cal;
 
 import java.time.Instant;

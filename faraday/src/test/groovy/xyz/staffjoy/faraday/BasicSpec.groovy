@@ -1,4 +1,4 @@
-package xyz.staffjoy.faraday
+package com.phoebe.staffjoy.faraday
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import org.junit.Rule

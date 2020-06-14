@@ -12,8 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import xyz.staffjoy.common.config.StaffjoyProps;
-import xyz.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.common.config.StaffjoyProps;
+import com.phoebe.staffjoy.common.env.EnvConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;

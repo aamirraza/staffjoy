@@ -4,7 +4,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
-import xyz.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
 
 import java.util.HashMap;
 import java.util.List;

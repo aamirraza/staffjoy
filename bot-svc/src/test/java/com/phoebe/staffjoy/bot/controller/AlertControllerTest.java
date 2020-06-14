@@ -14,14 +14,14 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.bot.dto.*;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.bot.dto.*;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.*;
 import com.phoebe.staffjoy.mail.client.MailClient;
 import com.phoebe.staffjoy.mail.dto.EmailRequest;
 
@@ -37,7 +37,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.bot.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.bot.client"})
 @Slf4j
 public class AlertControllerTest {
     @Autowired

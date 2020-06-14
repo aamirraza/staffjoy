@@ -4,17 +4,17 @@ import com.phoebe.staffjoy.company.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.auth.AuthContext;
-import xyz.staffjoy.common.auth.Authorize;
-import xyz.staffjoy.common.validation.Group1;
-import xyz.staffjoy.common.validation.Group2;
-import xyz.staffjoy.company.dto.CompanyDto;
-import xyz.staffjoy.company.dto.CompanyList;
-import xyz.staffjoy.company.dto.ListCompanyResponse;
-import xyz.staffjoy.company.dto.GenericCompanyResponse;
-import xyz.staffjoy.company.service.CompanyService;
-import xyz.staffjoy.company.service.PermissionService;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthContext;
+import com.phoebe.staffjoy.common.auth.Authorize;
+import com.phoebe.staffjoy.common.validation.Group1;
+import com.phoebe.staffjoy.common.validation.Group2;
+import com.phoebe.staffjoy.company.dto.CompanyDto;
+import com.phoebe.staffjoy.company.dto.CompanyList;
+import com.phoebe.staffjoy.company.dto.ListCompanyResponse;
+import com.phoebe.staffjoy.company.dto.GenericCompanyResponse;
+import com.phoebe.staffjoy.company.service.CompanyService;
+import com.phoebe.staffjoy.company.service.PermissionService;
 
 @RestController
 @RequestMapping("/v1/company")

@@ -37,3 +37,5 @@ config/*.yml
 k8s/test/config.yaml
 k8s/prod/config.yaml
 k8s/uat/config.yaml
+hs_err_*.log
+replay_*.log

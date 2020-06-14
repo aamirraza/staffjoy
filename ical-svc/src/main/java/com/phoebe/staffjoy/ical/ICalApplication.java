@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
-import xyz.staffjoy.common.config.StaffjoyWebConfig;
+import com.phoebe.staffjoy.common.config.StaffjoyWebConfig;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@EnableFeignClients(basePackages = {"xyz.staffjoy.company"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.company"})
 @Import(value = StaffjoyWebConfig.class)
 public class ICalApplication {
     public static void main(String[] args) {

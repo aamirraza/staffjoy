@@ -12,11 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.ResourceAccessException;
-import xyz.staffjoy.common.config.StaffjoyProps;
-import xyz.staffjoy.common.env.EnvConfig;
-import xyz.staffjoy.faraday.exceptions.ForbiddenException;
-import xyz.staffjoy.faraday.view.ErrorPage;
-import xyz.staffjoy.faraday.view.ErrorPageFactory;
+import com.phoebe.staffjoy.common.config.StaffjoyProps;
+import com.phoebe.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.faraday.exceptions.ForbiddenException;
+import com.phoebe.staffjoy.faraday.view.ErrorPage;
+import com.phoebe.staffjoy.faraday.view.ErrorPageFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;

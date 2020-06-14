@@ -5,7 +5,7 @@ import org.springframework.http.HttpMethod;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static xyz.staffjoy.faraday.core.utils.BodyConverter.convertStringToBody;
+import static com.phoebe.staffjoy.faraday.core.utils.BodyConverter.convertStringToBody;
 
 public class RequestData extends UnmodifiableRequestData {
     private boolean needRedirect;

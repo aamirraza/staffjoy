@@ -15,7 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.api.BaseResponse;
 import com.phoebe.staffjoy.mail.MailConstant;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -25,7 +25,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //@DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.mail.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.mail.client"})
 @Slf4j
 public class MailControllerTest {
     @Autowired

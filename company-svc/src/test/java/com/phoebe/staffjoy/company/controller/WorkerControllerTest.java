@@ -13,20 +13,20 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.TrackEventRequest;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.api.ResultCode;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.company.TestConfig;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.*;
-import xyz.staffjoy.company.model.Company;
-import xyz.staffjoy.company.model.Team;
-import xyz.staffjoy.company.repo.CompanyRepo;
-import xyz.staffjoy.company.repo.TeamRepo;
-import xyz.staffjoy.company.repo.WorkerRepo;
-import xyz.staffjoy.company.service.DirectoryService;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.TrackEventRequest;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.company.TestConfig;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.company.model.Company;
+import com.phoebe.staffjoy.company.model.Team;
+import com.phoebe.staffjoy.company.repo.CompanyRepo;
+import com.phoebe.staffjoy.company.repo.TeamRepo;
+import com.phoebe.staffjoy.company.repo.WorkerRepo;
+import com.phoebe.staffjoy.company.service.DirectoryService;
 
 import java.util.Optional;
 import java.util.TimeZone;
@@ -39,7 +39,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @DirtiesContext // avoid port conflict
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@EnableFeignClients(basePackages = {"xyz.staffjoy.company.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.company.client"})
 @Import(TestConfig.class)
 @Slf4j
 public class WorkerControllerTest {

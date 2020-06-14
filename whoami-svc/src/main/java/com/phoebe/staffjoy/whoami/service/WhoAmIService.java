@@ -8,17 +8,17 @@ import com.phoebe.staffjoy.whoami.props.AppProps;
 import io.sentry.SentryClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.crypto.Hash;
-import xyz.staffjoy.common.error.ServiceException;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.AdminOfList;
-import xyz.staffjoy.company.dto.GetAdminOfResponse;
-import xyz.staffjoy.company.dto.GetWorkerOfResponse;
-import xyz.staffjoy.company.dto.WorkerOfList;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.crypto.Hash;
+import com.phoebe.staffjoy.common.error.ServiceException;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.AdminOfList;
+import com.phoebe.staffjoy.company.dto.GetAdminOfResponse;
+import com.phoebe.staffjoy.company.dto.GetWorkerOfResponse;
+import com.phoebe.staffjoy.company.dto.WorkerOfList;
 
 @Service
 public class WhoAmIService {

@@ -10,12 +10,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
-import xyz.staffjoy.account.model.Account;
-import xyz.staffjoy.account.repo.AccountRepo;
+import com.phoebe.staffjoy.account.model.Account;
+import com.phoebe.staffjoy.account.repo.AccountRepo;
 import com.phoebe.staffjoy.bot.client.BotClient;
-import xyz.staffjoy.common.env.EnvConfig;
-import xyz.staffjoy.company.client.CompanyClient;
-import xyz.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.company.client.CompanyClient;
+import com.phoebe.staffjoy.company.dto.*;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

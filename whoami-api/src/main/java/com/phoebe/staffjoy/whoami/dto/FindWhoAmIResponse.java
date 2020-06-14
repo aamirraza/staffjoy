@@ -1,7 +1,7 @@
 package com.phoebe.staffjoy.whoami.dto;
 
 import lombok.*;
-import xyz.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.api.BaseResponse;
 
 @Getter
 @Setter

@@ -1,4 +1,4 @@
-package xyz.staffjoy.faraday.assertions
+package com.phoebe.staffjoy.faraday.assertions
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

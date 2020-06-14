@@ -2,7 +2,7 @@ package com.phoebe.staffjoy.faraday.core.trace;
 
 import com.phoebe.staffjoy.faraday.core.utils.BodyConverter;
 
-import static xyz.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
+import static com.phoebe.staffjoy.faraday.core.utils.BodyConverter.convertBodyToString;
 
 public class ForwardRequest extends IncomingRequest {
 

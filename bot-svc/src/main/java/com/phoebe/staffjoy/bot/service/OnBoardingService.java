@@ -5,8 +5,8 @@ import com.github.structlog4j.SLoggerFactory;
 import com.phoebe.staffjoy.bot.dto.OnboardWorkerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.company.dto.CompanyDto;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.company.dto.CompanyDto;
 
 @Service
 public class OnBoardingService {

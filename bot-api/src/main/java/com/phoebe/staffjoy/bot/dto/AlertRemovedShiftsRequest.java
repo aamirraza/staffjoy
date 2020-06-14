@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import xyz.staffjoy.company.dto.ShiftDto;
+import com.phoebe.staffjoy.company.dto.ShiftDto;
 
 import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;

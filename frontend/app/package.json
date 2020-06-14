@@ -69,7 +69,7 @@
     "moment": "^2.16.0",
     "moment-timezone": "^0.5.9",
     "normalizr": "^2.2.1",
-    "npm-zepto": "^1.1.7",
+    "cash-dom": "^7.0.3",
     "raven-js": "^3.7.0",
     "react": "^15.2.1",
     "react-color": "2.11.1",

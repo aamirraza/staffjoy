@@ -12,11 +12,11 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.CreateAccountRequest;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.CreateAccountRequest;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.common.env.EnvConfig;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

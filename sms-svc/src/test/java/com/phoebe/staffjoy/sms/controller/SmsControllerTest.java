@@ -13,8 +13,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
 import com.phoebe.staffjoy.sms.client.SmsClient;
 import com.phoebe.staffjoy.sms.dto.SmsRequest;
 import com.phoebe.staffjoy.sms.props.AppProps;
@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //@DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.sms.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.sms.client"})
 @Slf4j
 public class SmsControllerTest {
     @Autowired

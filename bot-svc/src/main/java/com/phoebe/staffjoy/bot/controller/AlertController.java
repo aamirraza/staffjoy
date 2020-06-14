@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.staffjoy.bot.dto.*;
+import com.phoebe.staffjoy.bot.dto.*;
 import com.phoebe.staffjoy.bot.service.AlertService;
-import xyz.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.api.BaseResponse;
 
 @RestController
 @RequestMapping(value = "/v1")

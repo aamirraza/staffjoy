@@ -1,7 +1,7 @@
 package com.phoebe.staffjoy.common.auth;
 
 import com.phoebe.staffjoy.common.crypto.Sign;
-import xyz.staffjoy.common.crypto.Sign;
+import com.phoebe.staffjoy.common.crypto.Sign;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

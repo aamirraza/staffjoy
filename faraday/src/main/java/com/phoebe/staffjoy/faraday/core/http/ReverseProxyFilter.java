@@ -8,12 +8,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.filter.OncePerRequestFilter;
-import xyz.staffjoy.faraday.config.FaradayProperties;
-import xyz.staffjoy.faraday.config.MappingProperties;
-import xyz.staffjoy.faraday.core.interceptor.PreForwardRequestInterceptor;
-import xyz.staffjoy.faraday.core.mappings.MappingsProvider;
-import xyz.staffjoy.faraday.core.trace.ProxyingTraceInterceptor;
-import xyz.staffjoy.faraday.exceptions.FaradayException;
+import com.phoebe.staffjoy.faraday.config.FaradayProperties;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.core.interceptor.PreForwardRequestInterceptor;
+import com.phoebe.staffjoy.faraday.core.mappings.MappingsProvider;
+import com.phoebe.staffjoy.faraday.core.trace.ProxyingTraceInterceptor;
+import com.phoebe.staffjoy.faraday.exceptions.FaradayException;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

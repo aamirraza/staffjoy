@@ -10,11 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.account.dto.CreateAccountRequest;
-import xyz.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.account.dto.CreateAccountRequest;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
 import com.phoebe.staffjoy.web.service.HelperService;
 
 @Controller

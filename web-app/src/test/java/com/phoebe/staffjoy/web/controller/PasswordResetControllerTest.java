@@ -10,10 +10,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.PasswordResetRequest;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.PasswordResetRequest;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.env.EnvConfig;
 import com.phoebe.staffjoy.web.view.Constant;
 import com.phoebe.staffjoy.web.view.PageFactory;
 

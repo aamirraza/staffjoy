@@ -9,11 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.PasswordResetRequest;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.error.ServiceException;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.PasswordResetRequest;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.error.ServiceException;
 import com.phoebe.staffjoy.web.service.HelperService;
 
 import javax.servlet.http.HttpServletRequest;

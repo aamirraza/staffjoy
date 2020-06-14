@@ -1,4 +1,4 @@
-package xyz.staffjoy.faraday.assertions
+package com.phoebe.staffjoy.faraday.assertions
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import org.springframework.http.ResponseEntity

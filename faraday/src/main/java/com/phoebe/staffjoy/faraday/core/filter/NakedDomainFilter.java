@@ -3,7 +3,7 @@ package com.phoebe.staffjoy.faraday.core.filter;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.springframework.web.filter.OncePerRequestFilter;
-import xyz.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.common.env.EnvConfig;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

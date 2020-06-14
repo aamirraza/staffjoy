@@ -2,8 +2,8 @@ package com.phoebe.staffjoy.faraday.core.interceptor;
 
 import com.phoebe.staffjoy.faraday.config.MappingProperties;
 import org.springframework.http.HttpHeaders;
-import xyz.staffjoy.faraday.config.MappingProperties;
-import xyz.staffjoy.faraday.core.http.ResponseData;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.core.http.ResponseData;
 
 import java.util.List;
 

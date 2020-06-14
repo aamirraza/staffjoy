@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
  
     <parent>
-        <groupId>xyz.staffjoy</groupId>
+        <groupId>com.phoebe.staffjoy</groupId>
         <artifactId>staffjoy-parent</artifactId>
         <version>1.0</version>
     </parent>
@@ -40,21 +40,21 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>xyz.staffjoy</groupId>
+            <groupId>com.phoebe.staffjoy</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>xyz.staffjoy</groupId>
+            <groupId>com.phoebe.staffjoy</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>xyz.staffjoy</groupId>
+            <groupId>com.phoebe.staffjoy</groupId>
             <artifactId>account-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>xyz.staffjoy</groupId>
+            <groupId>com.phoebe.staffjoy</groupId>
             <artifactId>bot-api</artifactId>
             <version>1.0.0</version>
         </dependency>

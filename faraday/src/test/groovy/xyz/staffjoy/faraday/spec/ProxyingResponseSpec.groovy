@@ -1,8 +1,8 @@
-package xyz.staffjoy.faraday.spec
+package com.phoebe.staffjoy.faraday.spec
 
-import static xyz.staffjoy.faraday.assertions.Assertions.assertThat
+import static com.phoebe.staffjoy.faraday.assertions.Assertions.assertThat
 import spock.lang.Unroll
-import xyz.staffjoy.faraday.BasicSpec
+import com.phoebe.staffjoy.faraday.BasicSpec
 
 import static org.springframework.http.HttpMethod.GET
 import static org.springframework.http.HttpStatus.BAD_REQUEST

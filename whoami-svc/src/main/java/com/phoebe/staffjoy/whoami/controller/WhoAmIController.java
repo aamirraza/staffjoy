@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.auth.AuthContext;
-import xyz.staffjoy.common.auth.Authorize;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthContext;
+import com.phoebe.staffjoy.common.auth.Authorize;
 import com.phoebe.staffjoy.whoami.dto.FindWhoAmIResponse;
 
 @RestController

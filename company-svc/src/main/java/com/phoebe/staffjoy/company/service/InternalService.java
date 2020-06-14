@@ -4,8 +4,8 @@ import com.phoebe.staffjoy.company.dto.GrowthGraphResponse;
 import com.phoebe.staffjoy.company.repo.ShiftRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.company.dto.GrowthGraphResponse;
-import xyz.staffjoy.company.repo.ShiftRepo;
+import com.phoebe.staffjoy.company.dto.GrowthGraphResponse;
+import com.phoebe.staffjoy.company.repo.ShiftRepo;
 
 import java.util.HashMap;
 import java.util.List;

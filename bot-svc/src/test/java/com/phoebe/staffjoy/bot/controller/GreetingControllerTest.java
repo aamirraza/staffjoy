@@ -12,13 +12,13 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
 import com.phoebe.staffjoy.bot.BotConstant;
-import xyz.staffjoy.common.api.BaseResponse;
-import xyz.staffjoy.common.api.ResultCode;
-import xyz.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.api.BaseResponse;
+import com.phoebe.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
 import com.phoebe.staffjoy.mail.client.MailClient;
 import com.phoebe.staffjoy.mail.dto.EmailRequest;
 
@@ -34,7 +34,7 @@ import static org.springframework.boot.test.context.SpringBootTest.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.bot.client"})
+@EnableFeignClients(basePackages = {"com.phoebe.staffjoy.bot.client"})
 @Slf4j
 public class GreetingControllerTest {
     @Autowired

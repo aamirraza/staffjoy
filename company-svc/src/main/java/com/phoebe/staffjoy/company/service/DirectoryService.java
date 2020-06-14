@@ -11,21 +11,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.account.client.AccountClient;
-import xyz.staffjoy.account.dto.AccountDto;
-import xyz.staffjoy.account.dto.GenericAccountResponse;
-import xyz.staffjoy.account.dto.GetOrCreateRequest;
+import com.phoebe.staffjoy.account.client.AccountClient;
+import com.phoebe.staffjoy.account.dto.AccountDto;
+import com.phoebe.staffjoy.account.dto.GenericAccountResponse;
+import com.phoebe.staffjoy.account.dto.GetOrCreateRequest;
 import com.phoebe.staffjoy.bot.dto.OnboardWorkerRequest;
-import xyz.staffjoy.common.api.ResultCode;
-import xyz.staffjoy.common.auditlog.LogEntry;
-import xyz.staffjoy.common.auth.AuthConstant;
-import xyz.staffjoy.common.auth.AuthContext;
-import xyz.staffjoy.common.error.ServiceException;
-import xyz.staffjoy.company.dto.*;
-import xyz.staffjoy.company.model.Directory;
-import xyz.staffjoy.company.repo.CompanyRepo;
-import xyz.staffjoy.company.repo.DirectoryRepo;
-import xyz.staffjoy.company.service.helper.ServiceHelper;
+import com.phoebe.staffjoy.common.api.ResultCode;
+import com.phoebe.staffjoy.common.auditlog.LogEntry;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthContext;
+import com.phoebe.staffjoy.common.error.ServiceException;
+import com.phoebe.staffjoy.company.dto.*;
+import com.phoebe.staffjoy.company.model.Directory;
+import com.phoebe.staffjoy.company.repo.CompanyRepo;
+import com.phoebe.staffjoy.company.repo.DirectoryRepo;
+import com.phoebe.staffjoy.company.service.helper.ServiceHelper;
 
 @Service
 public class DirectoryService {

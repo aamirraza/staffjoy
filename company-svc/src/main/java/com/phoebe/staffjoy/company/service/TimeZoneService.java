@@ -2,7 +2,7 @@ package com.phoebe.staffjoy.company.service;
 
 import com.phoebe.staffjoy.company.dto.TimeZoneList;
 import org.springframework.stereotype.Service;
-import xyz.staffjoy.company.dto.TimeZoneList;
+import com.phoebe.staffjoy.company.dto.TimeZoneList;
 
 import java.util.TimeZone;
 

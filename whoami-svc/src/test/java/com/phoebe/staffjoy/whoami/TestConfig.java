@@ -5,7 +5,7 @@ import feign.RequestTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
-import xyz.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
 
 /**
  * Pass CURRENT_USER_HEADER via Feign for testing

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import $ from 'npm-zepto';
+import $ from 'cash-dom';
 import React, { PropTypes } from 'react';
 import ModalListSelectableItem from './SelectableItem';
 

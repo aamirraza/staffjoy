@@ -4,7 +4,7 @@ import com.phoebe.staffjoy.faraday.config.FaradayProperties;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
-import xyz.staffjoy.faraday.config.FaradayProperties;
+import com.phoebe.staffjoy.faraday.config.FaradayProperties;
 
 import static java.util.UUID.randomUUID;
 

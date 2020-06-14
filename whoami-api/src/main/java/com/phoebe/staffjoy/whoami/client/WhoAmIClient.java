@@ -4,7 +4,7 @@ import com.phoebe.staffjoy.whoami.WhoAmIConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
-import xyz.staffjoy.common.auth.AuthConstant;
+import com.phoebe.staffjoy.common.auth.AuthConstant;
 import com.phoebe.staffjoy.whoami.dto.FindWhoAmIResponse;
 import com.phoebe.staffjoy.whoami.dto.GetIntercomSettingResponse;
 

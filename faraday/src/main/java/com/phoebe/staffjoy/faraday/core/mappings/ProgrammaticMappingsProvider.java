@@ -1,12 +1,12 @@
 package com.phoebe.staffjoy.faraday.core.mappings;
 
 import org.springframework.boot.autoconfigure.web.ServerProperties;
-import xyz.staffjoy.common.env.EnvConfig;
-import xyz.staffjoy.common.services.Service;
-import xyz.staffjoy.common.services.ServiceDirectory;
-import xyz.staffjoy.faraday.config.FaradayProperties;
-import xyz.staffjoy.faraday.config.MappingProperties;
-import xyz.staffjoy.faraday.core.http.HttpClientProvider;
+import com.phoebe.staffjoy.common.env.EnvConfig;
+import com.phoebe.staffjoy.common.services.Service;
+import com.phoebe.staffjoy.common.services.ServiceDirectory;
+import com.phoebe.staffjoy.faraday.config.FaradayProperties;
+import com.phoebe.staffjoy.faraday.config.MappingProperties;
+import com.phoebe.staffjoy.faraday.core.http.HttpClientProvider;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;

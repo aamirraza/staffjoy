@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.phoebe.staffjoy</groupId>
+        <groupId>com.knewton.planner</groupId>
         <artifactId>staffjoy-parent</artifactId>
         <version>1.0</version>
     </parent>
@@ -18,31 +18,31 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>bot-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>account-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>sms-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.phoebe.staffjoy</groupId>
+            <groupId>com.knewton.planner</groupId>
             <artifactId>mail-api</artifactId>
             <version>1.0.1</version>
         </dependency>

@@ -16,7 +16,7 @@ data:
         <root level="warn">
             <appender-ref ref="ConsoleAppender" />
         </root>
-        <logger name="com.phoebe.staffjoy" additivity="false" level="info">
+        <logger name="com.knewton.planner" additivity="false" level="info">
             <appender-ref ref="ConsoleAppender" />
         </logger>
     </configuration>

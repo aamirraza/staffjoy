@@ -76,10 +76,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(true);
 
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001981226";
         Instant memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        String photoUrl = "https://staffjoy.xyz/photo/test.png";
+        String photoUrl = "https://planner.xyz/photo/test.png";
         AccountDto accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)
@@ -140,7 +140,7 @@ public class DirectoryControllerTest {
                 .thenReturn(genericAccountResponse);
 
         String updatedName = "testAccount002";
-        String updatedEmail = "test002@staffjoy.xyz";
+        String updatedEmail = "test002@planner.xyz";
         String updatedPhoneNumber = "18001982337";
         directoryEntryDto2.setInternalId(UUID.randomUUID().toString());
         directoryEntryDto2.setName(updatedName);
@@ -208,10 +208,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(true);
 
         String name = "testAccount";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001981226";
         Instant memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        String photoUrl = "https://staffjoy.xyz/photo/test.png";
+        String photoUrl = "https://planner.xyz/photo/test.png";
         AccountDto accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)
@@ -270,10 +270,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(true);
 
         String name = "testAccount";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001981226";
         Instant memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        String photoUrl = "https://staffjoy.xyz/photo/test.png";
+        String photoUrl = "https://planner.xyz/photo/test.png";
         AccountDto accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)
@@ -316,10 +316,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(true);
         interalId = UUID.randomUUID().toString();
         name = "testAccount002";
-        email = "test002@staffjoy.xyz";
+        email = "test002@planner.xyz";
         phoneNumber = "18001981336";
         memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        photoUrl = "https://staffjoy.xyz/photo/test002.png";
+        photoUrl = "https://planner.xyz/photo/test002.png";
         accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)
@@ -352,10 +352,10 @@ public class DirectoryControllerTest {
         // create third directory
         interalId = UUID.randomUUID().toString();
         name = "testAccount003";
-        email = "test003@staffjoy.xyz";
+        email = "test003@planner.xyz";
         phoneNumber = "18001981556";
         memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        photoUrl = "https://staffjoy.xyz/photo/test003.png";
+        photoUrl = "https://planner.xyz/photo/test003.png";
         accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)
@@ -412,10 +412,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(false);
 
         String name = "testAccount";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001981226";
         Instant memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        String photoUrl = "https://staffjoy.xyz/photo/test.png";
+        String photoUrl = "https://planner.xyz/photo/test.png";
 
 
         // create directory and verify
@@ -459,10 +459,10 @@ public class DirectoryControllerTest {
         when(companyRepo.existsById(companyId)).thenReturn(true);
 
         String name = "testAccount";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001981226";
         Instant memberSince = Instant.now().minusSeconds(24 * 3600 * 30); // 30 days ago
-        String photoUrl = "https://staffjoy.xyz/photo/test.png";
+        String photoUrl = "https://planner.xyz/photo/test.png";
         AccountDto accountDto = AccountDto.builder()
                 .id(UUID.randomUUID().toString())
                 .name(name)

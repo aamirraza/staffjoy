@@ -78,7 +78,7 @@ public class LoginControllerTest {
     @Test
     public void testLoginAndLogout() throws Exception {
         String name = "test_user";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         Instant memberSince = Instant.now().minus(100, ChronoUnit.DAYS);
         String userId = UUID.randomUUID().toString();
         AccountDto accountDto = AccountDto.builder()
@@ -88,7 +88,7 @@ public class LoginControllerTest {
                 .memberSince(memberSince)
                 .phoneNumber("18001112222")
                 .confirmedAndActive(true)
-                .photoUrl("http://www.staffjoy.xyz/photo/test_user.png")
+                .photoUrl("http://www.planner.xyz/photo/test_user.png")
                 .build();
         when(accountClient.verifyPassword(anyString(), any(VerifyPasswordRequest.class)))
                 .thenReturn(new GenericAccountResponse(accountDto));
@@ -165,7 +165,7 @@ public class LoginControllerTest {
         when(accountClient.verifyPassword(anyString(), any(VerifyPasswordRequest.class)))
                 .thenReturn(genericAccountResponse);
 
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         MvcResult mvcResult = mockMvc.perform(post("/login")
                 .param("email", email)
                 .param("password", "pass"))

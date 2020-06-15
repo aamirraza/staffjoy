@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-@FeignClient(name = AccountConstant.SERVICE_NAME, path = "/v1/account", url = "${staffjoy.account-service-endpoint}")
+@FeignClient(name = AccountConstant.SERVICE_NAME, path = "/v1/account", url = "${planner.account-service-endpoint}")
 // TODO Client side validation can be enabled as needed
 // @Validated
 public interface AccountClient {

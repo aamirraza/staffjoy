@@ -66,7 +66,7 @@ public class AccountServiceTest {
 
     @Test
     public void testSendEmail() {
-        String externalApex = "staffjoy-v2.local";
+        String externalApex = "planner-v2.local";
         when(appProps.getSigningSecret()).thenReturn("test_secret");
         when(envConfig.getExternalApex()).thenReturn(externalApex);
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
@@ -124,10 +124,10 @@ public class AccountServiceTest {
 
         Account account = Account.builder().id("123456")
                 .name("testAccount")
-                .email("test@staffjoy.net")
+                .email("test@planner.net")
                 .memberSince(Instant.now())
                 .confirmedAndActive(true)
-                .photoUrl("https://staffjoy.xyz/photo/test.png")
+                .photoUrl("https://planner.xyz/photo/test.png")
                 .phoneNumber("18001801266")
                 .support(false)
                 .build();

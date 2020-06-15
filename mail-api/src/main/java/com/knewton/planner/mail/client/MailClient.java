@@ -9,7 +9,7 @@ import com.knewton.planner.mail.MailConstant;
 
 import javax.validation.Valid;
 
-@FeignClient(name = MailConstant.SERVICE_NAME, path = "/v1", url = "${staffjoy.email-service-endpoint}")
+@FeignClient(name = MailConstant.SERVICE_NAME, path = "/v1", url = "${planner.email-service-endpoint}")
 public interface MailClient {
     @PostMapping(path = "/send")
     BaseResponse send(@RequestBody @Valid EmailRequest request);

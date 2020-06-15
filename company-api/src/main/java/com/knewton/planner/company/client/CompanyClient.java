@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = CompanyConstant.SERVICE_NAME, path = "/v1/company", url = "${staffjoy.company-service-endpoint}")
+@FeignClient(name = CompanyConstant.SERVICE_NAME, path = "/v1/company", url = "${planner.company-service-endpoint}")
 public interface CompanyClient {
     // Company Apis
     @PostMapping(path = "/create")

@@ -46861,9 +46861,9 @@
 	// apex for the various planner environments
 	var HTTP_PREFIX = exports.HTTP_PREFIX = 'http://';
 	var HTTPS_PREFIX = exports.HTTPS_PREFIX = 'https://';
-	var DEVELOPMENT_APEX = exports.DEVELOPMENT_APEX = '.staffjoy-v2.local';
+	var DEVELOPMENT_APEX = exports.DEVELOPMENT_APEX = '.planner-v2.local';
 	var UAT_APEX = exports.UAT_APEX = '.staffjoy-uat.xyz';
-	var PRODUCTION_APEX = exports.PRODUCTION_APEX = '.staffjoy.xyz';
+	var PRODUCTION_APEX = exports.PRODUCTION_APEX = '.planner.xyz';
 
 	var DEFAULT_REFETCH_INTERVAL = 10;
 
@@ -55698,7 +55698,7 @@
 /* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "assets/staffjoy.f66e83a1dd4ad3e1c5b1d2c130058c3e.png";
+	module.exports = __webpack_require__.p + "assets/planner.f66e83a1dd4ad3e1c5b1d2c130058c3e.png";
 
 /***/ }),
 /* 322 */

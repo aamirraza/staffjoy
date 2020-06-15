@@ -66,7 +66,7 @@ public class ConfirmResetControllerTest {
     public void testGetConfirmReset() throws Exception {
 
         String userId = UUID.randomUUID().toString();
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String signingToken = appProps.getSigningSecret();
         String token = Sign.generateEmailConfirmationToken(userId, email, signingToken);
         // get request
@@ -82,7 +82,7 @@ public class ConfirmResetControllerTest {
     public void testGetConfirmResetWrongToken() throws Exception {
 
         String userId = UUID.randomUUID().toString();
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String signingToken = appProps.getSigningSecret();
         String token = Sign.generateEmailConfirmationToken(userId, email, signingToken);
         token += "wrong_token";
@@ -96,7 +96,7 @@ public class ConfirmResetControllerTest {
     @Test
     public void testPostConfirmReset() throws Exception {
         String name = "test_user";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         Instant memberSince = Instant.now().minus(100, ChronoUnit.DAYS);
         String userId = UUID.randomUUID().toString();
         String token = Sign.generateEmailConfirmationToken(userId, email, appProps.getSigningSecret());
@@ -108,7 +108,7 @@ public class ConfirmResetControllerTest {
                 .memberSince(memberSince)
                 .phoneNumber("18001112222")
                 .confirmedAndActive(true)
-                .photoUrl("http://www.staffjoy.xyz/photo/test_user.png")
+                .photoUrl("http://www.planner.xyz/photo/test_user.png")
                 .build();
 
         when(accountClient.getAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, userId))

@@ -13,9 +13,9 @@ export const SENTRY_UAT_KEY = 'https://6d2bfa8c878d4905b2537647032f61c8@sentry.i
 // apex for the various planner environments
 export const HTTP_PREFIX = 'http://';
 export const HTTPS_PREFIX = 'https://';
-export const DEVELOPMENT_APEX = '.staffjoy-v2.local';
+export const DEVELOPMENT_APEX = '.planner-v2.local';
 export const UAT_APEX = '.staffjoy-uat.xyz';
-export const PRODUCTION_APEX = '.staffjoy.xyz';
+export const PRODUCTION_APEX = '.planner.xyz';
 
 const DEFAULT_REFETCH_INTERVAL = 10;
 

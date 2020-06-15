@@ -16,7 +16,7 @@ class ProxyingRequestSpec extends BasicSpec {
     @Unroll
     def "Should proxy HTTP request preserving request method when method is #method"() {
         when:
-        sendRequest method, 'www.staffjoy-v2.local', '/path/1'
+        sendRequest method, 'www.planner-v2.local', '/path/1'
 
         then:
         assertThat(localhost8086, localhost8087)
@@ -31,7 +31,7 @@ class ProxyingRequestSpec extends BasicSpec {
     @Unroll
     def "Should not proxy HTTP request preserving request method when method is OPTIONS"() {
         when:
-        def response = sendRequest method, 'www.staffjoy-v2.local', '/path/1'
+        def response = sendRequest method, 'www.planner-v2.local', '/path/1'
 
         then:
         assertThat(localhost8086, localhost8087)
@@ -44,7 +44,7 @@ class ProxyingRequestSpec extends BasicSpec {
     @Unroll
     def "Should proxy HTTP request to #destinationUrl when request uri is #requestUri"() {
         when:
-        sendRequest GET, 'www.staffjoy-v2.local', requestUri
+        sendRequest GET, 'www.planner-v2.local', requestUri
 
         then:
         assertThat(localhost8086, localhost8087)
@@ -64,14 +64,14 @@ class ProxyingRequestSpec extends BasicSpec {
     @Unroll
     def "Should proxy HTTP request with headers #destinationHeaders when request headers are #requestHeaders including X-Forwarded headers"() {
         when:
-        sendRequest GET, 'www.staffjoy-v2.local', '/path/1', requestHeaders
+        sendRequest GET, 'www.planner-v2.local', '/path/1', requestHeaders
 
         then:
         assertThat(localhost8086, localhost8087)
                  .haveReceivedRequest()
         .withMethodAndUrl(GET, '/path/1')
         .withHeaders(destinationHeaders)
-        .withHeaders(['X-Forwarded-Proto': 'http', 'X-Forwarded-Host': 'www.staffjoy-v2.local', 'X-Forwarded-Port': port.toString()])
+        .withHeaders(['X-Forwarded-Proto': 'http', 'X-Forwarded-Host': 'www.planner-v2.local', 'X-Forwarded-Port': port.toString()])
         .withoutBody()
 
         where:
@@ -87,7 +87,7 @@ class ProxyingRequestSpec extends BasicSpec {
     def "Should proxy HTTP request with headers #destinationHeaders when request headers are #requestHeaders"() {
 
         when:
-        sendRequest GET, 'ical.staffjoy-v2.local', '/path/9', requestHeaders
+        sendRequest GET, 'ical.planner-v2.local', '/path/9', requestHeaders
 
         then:
         assertThat(localhost8086)
@@ -99,14 +99,14 @@ class ProxyingRequestSpec extends BasicSpec {
 
         where:
         requestHeaders                            | destinationHeaders         | removedHeaders
-        [:]                                       | ['Host': 'ical.staffjoy-v2.local'] | []
-        ['TE': 'compress']                        | ['Host': 'ical.staffjoy-v2.local'] | ['TE']
+        [:]                                       | ['Host': 'ical.planner-v2.local'] | []
+        ['TE': 'compress']                        | ['Host': 'ical.planner-v2.local'] | ['TE']
     }
 
     @Unroll
     def "Should proxy HTTP request preserving request body when body is '#body'"() {
         when:
-        sendRequest POST, 'www.staffjoy-v2.local', '/path/1', [:], body
+        sendRequest POST, 'www.planner-v2.local', '/path/1', [:], body
 
         then:
         assertThat(localhost8086, localhost8087)
@@ -121,7 +121,7 @@ class ProxyingRequestSpec extends BasicSpec {
     @Unroll
     def "Should fail to proxy HTTP request when destination URL cannot be created"() {
         when:
-        def response = sendRequest GET, "faraday.staffjoy-v2.local", "/path/4"
+        def response = sendRequest GET, "faraday.planner-v2.local", "/path/4"
 
         then:
         assertThat(localhost8086, localhost8087)

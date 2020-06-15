@@ -6,7 +6,7 @@ spring:
   application:
     name: bot-service
 
-staffjoy:
+planner:
   common:
     sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}

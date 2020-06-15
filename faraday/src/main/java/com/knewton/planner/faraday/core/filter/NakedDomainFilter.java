@@ -28,7 +28,7 @@ public class NakedDomainFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         // if you're hitting naked domain - go to www
-        // e.g. staffjoy.xyz/foo?true=1 should redirect to www.staffjoy.xyz/foo?true=1
+        // e.g. planner.xyz/foo?true=1 should redirect to www.planner.xyz/foo?true=1
         if (envConfig.getExternalApex().equals(request.getServerName())) {
             // It's hitting naked domain - redirect to www
             log.info("hitting naked domain - redirect to www");

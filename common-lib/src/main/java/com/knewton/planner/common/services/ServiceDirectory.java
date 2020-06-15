@@ -9,7 +9,7 @@ import java.util.TreeMap;
  *
  * StaffjoyServices ia a map of subdomains -> specs
  * Subdomain is <string> + Env["rootDomain"]
- * e.g. "login" service on prod is "login" + "staffjoy.xyz"
+ * e.g. "login" service on prod is "login" + "planner.xyz"
  *
  * KEEP THIS LIST IN ALPHABETICAL ORDER PLEASE
  */

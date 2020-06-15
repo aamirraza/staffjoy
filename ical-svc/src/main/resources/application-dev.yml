@@ -11,5 +11,5 @@ management:
       exposure:
         include: "*"
 
-staffjoy:
+planner:
   company-service-endpoint: http://localhost:8082

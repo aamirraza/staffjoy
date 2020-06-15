@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.knewton.planner.bot.BotConstant;
 
-@FeignClient(name = BotConstant.SERVICE_NAME, path = "/v1", url = "${staffjoy.bot-service-endpoint}")
+@FeignClient(name = BotConstant.SERVICE_NAME, path = "/v1", url = "${planner.bot-service-endpoint}")
 public interface BotClient {
 
     @PostMapping(path="sms_greeting")

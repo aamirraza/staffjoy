@@ -76,10 +76,10 @@ public class HelperService {
     @Async(AppConfig.ASYNC_EXECUTOR_NAME)
     public void sendEmailAsync(AccountDto a, CompanyDto c) {
         EmailRequest emailRequest = EmailRequest.builder()
-                .to("sales@staffjoy.xyz")
+                .to("sales@planner.xyz")
                 .name("")
                 .subject(String.format("%s from %s just joined Staffjoy", a.getName(), c.getName()))
-                .htmlBody(String.format("Name: %s<br>Phone: %s<br>Email: %s<br>Company: %s<br>App: https://app.staffjoy.com/#/companies/%s/employees/",
+                .htmlBody(String.format("Name: %s<br>Phone: %s<br>Email: %s<br>Company: %s<br>App: https://app.planner.com/#/companies/%s/employees/",
                         a.getName(),
                         a.getPhoneNumber(),
                         a.getEmail(),

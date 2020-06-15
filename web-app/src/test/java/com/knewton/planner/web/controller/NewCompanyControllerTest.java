@@ -84,7 +84,7 @@ public class NewCompanyControllerTest {
     @Test
     public void testCreateNewCompany() throws Exception {
         String name = "test_user";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         Instant memberSince = Instant.now().minus(100, ChronoUnit.DAYS);
         String userId = UUID.randomUUID().toString();
         String companyId = UUID.randomUUID().toString();
@@ -96,7 +96,7 @@ public class NewCompanyControllerTest {
                 .memberSince(memberSince)
                 .phoneNumber("18001112222")
                 .confirmedAndActive(true)
-                .photoUrl("http://www.staffjoy.xyz/photo/test_user.png")
+                .photoUrl("http://www.planner.xyz/photo/test_user.png")
                 .build();
         when(accountClient.getAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, userId))
                 .thenReturn(new GenericAccountResponse(accountDto));

@@ -6,7 +6,7 @@
 4. [PiggyMetrics微服务演示项目改造版](https://github.com/spring2go/piggymetrics)
 5. [Gitee开源项目](https://gitee.com/explore)
 6. [Philip I. Thomas](https://www.linkedin.com/in/philipithomas/)
-7. [Planner  Denouement](https://blog.staffjoy.com/denouement-abe7d26f2de0)
+7. [Planner  Denouement](https://blog.planner.com/denouement-abe7d26f2de0)
 8. [Staffjoy开源项目](https://github.com/Staffjoy)
 9. [Planner  V2](https://github.com/Staffjoy/v2)
 10. [Staffjoy课程教学版](https://github.com/spring2go/staffjoy)

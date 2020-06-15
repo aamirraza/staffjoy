@@ -24,7 +24,7 @@ public class EnvConfig {
         map = new HashMap<>();
         EnvConfig envConfig = EnvConfig.builder().name(EnvConstant.ENV_DEV)
                 .debug(true)
-                .externalApex("staffjoy-v2.local")
+                .externalApex("planner-v2.local")
                 .internalApex(EnvConstant.ENV_DEV)
                 .scheme("http")
                 .build();
@@ -32,7 +32,7 @@ public class EnvConfig {
 
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_TEST)
                 .debug(true)
-                .externalApex("staffjoy-v2.local")
+                .externalApex("planner-v2.local")
                 .internalApex(EnvConstant.ENV_DEV)
                 .scheme("http")
                 .build();
@@ -58,7 +58,7 @@ public class EnvConfig {
 
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_PROD)
                 .debug(false)
-                .externalApex("staffjoy.xyz")
+                .externalApex("planner.xyz")
                 .internalApex(EnvConstant.ENV_PROD)
                 .scheme("https")
                 .build();

@@ -7,7 +7,7 @@ import {
 
 require('./navigation-logo.scss');
 const imgUrl = require(
-  '../../../../../resources/images/staffjoy.png'
+  '../../../../../resources/images/planner.png'
 );
 
 function NavigationLogo({ companyId }) {

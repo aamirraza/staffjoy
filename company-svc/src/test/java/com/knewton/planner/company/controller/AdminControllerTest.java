@@ -72,7 +72,7 @@ public class AdminControllerTest {
         String companyId1 = UUID.randomUUID().toString();
         String userId = UUID.randomUUID().toString();
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001892333";
         DirectoryEntryDto directoryEntryDto1 = DirectoryEntryDto.builder()
                 .companyId(companyId1)
@@ -172,7 +172,7 @@ public class AdminControllerTest {
         String companyId = UUID.randomUUID().toString();
         String userId = UUID.randomUUID().toString();
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001892333";
         DirectoryEntryDto directoryEntryDto1 = DirectoryEntryDto.builder()
                 .companyId(companyId)

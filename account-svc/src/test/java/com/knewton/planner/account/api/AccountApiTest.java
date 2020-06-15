@@ -75,7 +75,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -89,7 +89,7 @@ public class AccountApiTest {
         assertThat(accountDto.isConfirmedAndActive()).isFalse();
 
         // change email
-        String changedEmail = "test123@staffjoy.xyz";
+        String changedEmail = "test123@planner.xyz";
         EmailConfirmation emailConfirmation = EmailConfirmation.builder()
                 .userId(accountDto.getId())
                 .email(changedEmail)
@@ -124,7 +124,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -137,7 +137,7 @@ public class AccountApiTest {
         AccountDto accountDto = genericAccountResponse.getAccount();
 
         // request email change
-        String updatedEmail = "test111@staffjoy.xyz";
+        String updatedEmail = "test111@planner.xyz";
         EmailChangeRequest emailChangeRequest = EmailChangeRequest.builder()
                 .email(updatedEmail)
                 .userId(accountDto.getId())
@@ -146,7 +146,7 @@ public class AccountApiTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify email sent
-        String externalApex = "staffjoy-v2.local";
+        String externalApex = "planner-v2.local";
         String subject = "Confirm Your New Email Address";
         ArgumentCaptor<EmailRequest> argument = ArgumentCaptor.forClass(EmailRequest.class);
         verify(mailClient, times(2)).send(argument.capture());
@@ -166,7 +166,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -187,7 +187,7 @@ public class AccountApiTest {
 
         // capture and verify
         String subject = "Activate your Planner  account";
-        String externalApex = "staffjoy-v2.local";
+        String externalApex = "planner-v2.local";
         ArgumentCaptor<EmailRequest> argument = ArgumentCaptor.forClass(EmailRequest.class);
         // 2 times, 1 for account creation, 1 for password reset
         verify(mailClient, times(2)).send(argument.capture());
@@ -233,7 +233,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -269,7 +269,7 @@ public class AccountApiTest {
         // verify not found
         VerifyPasswordRequest verifyPasswordRequest = VerifyPasswordRequest.builder()
                 .password(password)
-                .email("test000@staffjoy.xyz")
+                .email("test000@planner.xyz")
                 .build();
         genericAccountResponse = accountClient.verifyPassword(AuthConstant.AUTHORIZATION_WWW_SERVICE, verifyPasswordRequest);
         log.info(genericAccountResponse.toString());
@@ -309,7 +309,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -354,7 +354,7 @@ public class AccountApiTest {
 
         // create first account
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001801235";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -367,10 +367,10 @@ public class AccountApiTest {
 
         // create second account
         name = "testAccount002";
-        email = "test002@staffjoy.xyz";
+        email = "test002@planner.xyz";
         phoneNumber = "18001801236";
         String subject = "Confirm Your New Email Address";
-        String externalApex = "staffjoy-v2.local";
+        String externalApex = "planner-v2.local";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -420,7 +420,7 @@ public class AccountApiTest {
         accountDto.setMemberSince(oldMemberSince);
         // can't update to existing email
         String oldEmail = accountDto.getEmail();
-        accountDto.setEmail("test001@staffjoy.xyz");
+        accountDto.setEmail("test001@planner.xyz");
         genericAccountResponse1 = accountClient.updateAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, accountDto);
         log.info(genericAccountResponse1.toString());
         assertThat(genericAccountResponse1.isSuccess()).isFalse();
@@ -473,7 +473,7 @@ public class AccountApiTest {
 
         // user can change his/her email
         oldEmail = accountDto.getEmail();
-        String updatedEmail = "test003@staffjoy.xyz";
+        String updatedEmail = "test003@planner.xyz";
         accountDto.setEmail(updatedEmail);
         genericAccountResponse1 = accountClient.updateAccount(AuthConstant.AUTHORIZATION_AUTHENTICATED_USER, accountDto);
         log.info(genericAccountResponse1.toString());
@@ -504,7 +504,7 @@ public class AccountApiTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001801236";
         String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
@@ -541,7 +541,7 @@ public class AccountApiTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001801236";
         String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
@@ -575,7 +575,7 @@ public class AccountApiTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@staffjoy.xyz";
+        String email = "test001@planner.xyz";
         String phoneNumber = "18001801236";
         String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
@@ -598,7 +598,7 @@ public class AccountApiTest {
 
         // second account
         name = "testAccount002";
-        email = "test002@staffjoy.xyz";
+        email = "test002@planner.xyz";
         phoneNumber = "18001801237";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -620,7 +620,7 @@ public class AccountApiTest {
 
         // third account
         name = "testAccount003";
-        email = "test003@staffjoy.xyz";
+        email = "test003@planner.xyz";
         phoneNumber = "18001801238";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -686,7 +686,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -729,7 +729,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         String phoneNumber = "18001801236";
         String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
@@ -767,7 +767,7 @@ public class AccountApiTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount001";
-        String email = "test01@staffjoy.xyz";
+        String email = "test01@planner.xyz";
         String phoneNumber = "18001801236";
         String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
@@ -794,7 +794,7 @@ public class AccountApiTest {
         // phone duplicate
         createAccountRequest = CreateAccountRequest.builder()
                 .name("testAccount003")
-                .email("test02@staffjoy.xyz")
+                .email("test02@planner.xyz")
                 .phoneNumber(phoneNumber)
                 .build();
         genericAccountResponse = accountClient.createAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, createAccountRequest);

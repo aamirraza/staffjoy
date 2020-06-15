@@ -11,7 +11,7 @@ import com.knewton.planner.sms.dto.SmsRequest;
 
 import javax.validation.Valid;
 
-@FeignClient(name = SmsConstant.SERVICE_NAME, path = "/v1", url = "${staffjoy.sms-service-endpoint}")
+@FeignClient(name = SmsConstant.SERVICE_NAME, path = "/v1", url = "${planner.sms-service-endpoint}")
 public interface SmsClient {
     @PostMapping(path = "/queue_send")
     BaseResponse send(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Valid SmsRequest smsRequest);

@@ -3,7 +3,7 @@ function getEnvironmentSlug() {
   var url = window.location.href.toLowerCase();
   var domain = url.split('/')[2];
 
-  if (domain.endsWith('.staffjoy.xyz')) {
+  if (domain.endsWith('.planner.xyz')) {
     env = 'PROD';
   } else if (domain.endsWith('.staffjoystaging.xyz')) {
     env = 'STAGE';
@@ -17,7 +17,7 @@ function initializeGoogleAnalytics(env) {
   var googleAnalyticsMap = {
     PROD: {
       key: 'UA-57208929-1',
-      domains: ['*.staffjoy.xyz'],
+      domains: ['*.planner.xyz'],
     },
     STAGE: {
       key: 'UA-57208929-7',
@@ -57,7 +57,7 @@ function intercomLauncher(env, customLauncher, launcherId) {
       whoamiEndpoint = "https://whoami.staffjoystaging.xyz/intercom/";
       break;
     case 'PROD':
-      whoamiEndpoint = "https://whoami.staffjoy.xyz/intercom/";
+      whoamiEndpoint = "https://whoami.planner.xyz/intercom/";
         break;
     default:
         return;

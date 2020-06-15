@@ -50,7 +50,7 @@ public class SignupControllerTest {
     public void testSignup() throws Exception {
 
         String name = "test_user";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         Instant memberSince = Instant.now().minus(100, ChronoUnit.DAYS);
         String userId = UUID.randomUUID().toString();
         AccountDto accountDto = AccountDto.builder()
@@ -60,7 +60,7 @@ public class SignupControllerTest {
                 .memberSince(memberSince)
                 .phoneNumber("18001112222")
                 .confirmedAndActive(false)
-                .photoUrl("http://www.staffjoy.xyz/photo/test_user.png")
+                .photoUrl("http://www.planner.xyz/photo/test_user.png")
                 .build();
 
         when(accountClient.createAccount(anyString(), any(CreateAccountRequest.class)))

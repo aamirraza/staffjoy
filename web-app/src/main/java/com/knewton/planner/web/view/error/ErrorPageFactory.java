@@ -17,7 +17,7 @@ public class ErrorPageFactory {
                 .explanation("You may have mistyped the address, or the page may have been moved.")
                 .headerCode(HttpStatus.NOT_FOUND.value())
                 .linkText("Click here to go back to Staffjoy")
-                .linkHref("https://www.staffjoy.xyz")
+                .linkHref("https://www.planner.xyz")
                 .imageBase64(assetLoader.getImageBase64())
                 .build();
     }
@@ -28,7 +28,7 @@ public class ErrorPageFactory {
                 .explanation("Oops! Something broke. We're paging our engineers to look at it immediately.")
                 .headerCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .linkText("Click here to check out our system status page")
-                .linkHref("https://status.staffjoy.xyz")
+                .linkHref("https://status.planner.xyz")
                 .imageBase64(assetLoader.getImageBase64())
                 .build();
     }

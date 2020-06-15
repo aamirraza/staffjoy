@@ -16,7 +16,7 @@ public class ErrorPageFactory {
                 .explanation("Sorry, our servers seem to be slow. Please try again in a moment.")
                 .headerCode(HttpStatus.GATEWAY_TIMEOUT.value())
                 .linkText("Click here to check out our system status page")
-                .linkHref("https://status.staffjoy.xyz")
+                .linkHref("https://status.planner.xyz")
                 .imageBase64(assetLoader.getImageBase64())
                 .build();
     }
@@ -27,7 +27,7 @@ public class ErrorPageFactory {
                 .explanation("Sorry, it looks like you do not have permission to access this page.")
                 .headerCode(HttpStatus.FORBIDDEN.value())
                 .linkText("Contact our support team for help")
-                .linkHref("mailto:help@staffjoy.xyz")
+                .linkHref("mailto:help@planner.xyz")
                 .imageBase64(assetLoader.getImageBase64())
                 .build();
     }
@@ -38,7 +38,7 @@ public class ErrorPageFactory {
                 .explanation("Oops! Something broke. We're paging our engineers to look at it immediately.")
                 .headerCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .linkText("Click here to check out our system status page")
-                .linkHref("https://status.staffjoy.xyz")
+                .linkHref("https://status.planner.xyz")
                 .imageBase64(assetLoader.getImageBase64())
                 .build();
     }

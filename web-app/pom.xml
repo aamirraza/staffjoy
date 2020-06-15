@@ -14,7 +14,7 @@
     <artifactId>web-app</artifactId>
     <name>Planner-Web-App</name>
     <version>1.0.0</version>
-    <url>https://www.staffjoy.xyz</url>
+    <url>https://www.planner.xyz</url>
 
     <dependencies>
         <dependency>

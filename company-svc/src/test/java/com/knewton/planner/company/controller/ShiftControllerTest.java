@@ -120,10 +120,10 @@ public class ShiftControllerTest {
                 .companyId(company.getId())
                 .userId(userId1)
                 .name("test_user001")
-                .email("test_user001@staffjoy.xyz")
+                .email("test_user001@planner.xyz")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001999999")
-                .photoUrl("https://staffjoy.xyz/photo/test01.png")
+                .photoUrl("https://planner.xyz/photo/test01.png")
                 .build();
         when(directoryService.getDirectoryEntry(company.getId(), userId1)).thenReturn(directoryEntryDto1);
 
@@ -133,10 +133,10 @@ public class ShiftControllerTest {
                 .companyId(company.getId())
                 .userId(userId2)
                 .name("test_user002")
-                .email("test_user002@staffjoy.xyz")
+                .email("test_user002@planner.xyz")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001123456")
-                .photoUrl("https://staffjoy.xyz/photo/test02.png")
+                .photoUrl("https://planner.xyz/photo/test02.png")
                 .build();
         when(directoryService.getDirectoryEntry(company.getId(), userId2)).thenReturn(directoryEntryDto2);
     }

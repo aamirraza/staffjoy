@@ -56,7 +56,7 @@ public class PasswordResetControllerTest {
 
         // post request
         mvcResult = mockMvc.perform(post(ResetController.PASSWORD_RESET_PATH)
-                .param("email", "test@staffjoy.xyz"))
+                .param("email", "test@planner.xyz"))
                 .andExpect(status().isOk())
                 .andExpect(view().name(Constant.VIEW_CONFIRM))
                 .andExpect(content().string(containsString(pageFactory.buildResetConfirmPage().getDescription())))

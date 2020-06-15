@@ -98,10 +98,10 @@ public class WorkerControllerTest {
                 .companyId(companyId)
                 .userId(userId1)
                 .name("test_user001")
-                .email("test_user001@staffjoy.xyz")
+                .email("test_user001@planner.xyz")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001999999")
-                .photoUrl("https://staffjoy.xyz/photo/test01.png")
+                .photoUrl("https://planner.xyz/photo/test01.png")
                 .build();
         when(directoryService.getDirectoryEntry(companyId, userId1)).thenReturn(directoryEntryDto1);
 
@@ -123,10 +123,10 @@ public class WorkerControllerTest {
                 .companyId(companyId)
                 .userId(userId2)
                 .name("test_user002")
-                .email("test_user002@staffjoy.xyz")
+                .email("test_user002@planner.xyz")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18002888888")
-                .photoUrl("https://staffjoy.xyz/photo/test02.png")
+                .photoUrl("https://planner.xyz/photo/test02.png")
                 .build();
         when(directoryService.getDirectoryEntry(companyId, userId2)).thenReturn(directoryEntryDto3);
 

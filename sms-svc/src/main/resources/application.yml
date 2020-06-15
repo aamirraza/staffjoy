@@ -5,7 +5,7 @@ spring:
   application:
     name: sms-service
 
-staffjoy:
+planner:
   common:
     sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}

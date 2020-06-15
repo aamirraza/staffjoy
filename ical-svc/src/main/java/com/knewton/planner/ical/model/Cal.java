@@ -41,7 +41,7 @@ public class Cal {
         StringBuilder body = new StringBuilder();
         for (ShiftDto shiftDto : shiftList) {
             body.append("BEGIN:VEVENT\r\n");
-            body.append("ORGANIZER;CN=Engineering:MAILTO:support@staffjoy.xyz\r\n");
+            body.append("ORGANIZER;CN=Engineering:MAILTO:support@planner.xyz\r\n");
             body.append("SUMMARY: Work at " + this.companyName + "\r\n");
             body.append("UID:" + shiftDto.getUserId() + "\r\n");
             body.append("STATUS:CONFIRMED\r\n");

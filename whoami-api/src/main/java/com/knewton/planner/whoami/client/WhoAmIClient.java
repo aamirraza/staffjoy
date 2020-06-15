@@ -8,7 +8,7 @@ import com.knewton.planner.common.auth.AuthConstant;
 import com.knewton.planner.whoami.dto.FindWhoAmIResponse;
 import com.knewton.planner.whoami.dto.GetIntercomSettingResponse;
 
-@FeignClient(name = WhoAmIConstant.SERVICE_NAME, path = "/v1", url = "${staffjoy.whoami-service-endpoint}")
+@FeignClient(name = WhoAmIConstant.SERVICE_NAME, path = "/v1", url = "${planner.whoami-service-endpoint}")
 public interface WhoAmIClient {
     @GetMapping
     FindWhoAmIResponse findWhoAmI(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz);

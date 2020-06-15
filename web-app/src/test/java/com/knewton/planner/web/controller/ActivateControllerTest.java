@@ -64,7 +64,7 @@ public class ActivateControllerTest {
     @Test
     public void testActivateAccount() throws Exception {
         String name = "test_user";
-        String email = "test@staffjoy.xyz";
+        String email = "test@planner.xyz";
         Instant memberSince = Instant.now().minus(100, ChronoUnit.DAYS);
         String userId = UUID.randomUUID().toString();
         String token = Sign.generateEmailConfirmationToken(userId, email, appProps.getSigningSecret());
@@ -76,7 +76,7 @@ public class ActivateControllerTest {
                 .memberSince(memberSince)
                 .phoneNumber("18001112222")
                 .confirmedAndActive(true)
-                .photoUrl("http://www.staffjoy.xyz/photo/test_user.png")
+                .photoUrl("http://www.planner.xyz/photo/test_user.png")
                 .build();
 
         when(accountClient.getAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, userId))

@@ -16,7 +16,7 @@ spring:
     hibernate:
       ddl-auto: validate
 
-staffjoy:
+planner:
   common:
     sentry-dsn: https://b3230c38171d485a8e96ac0039b9e467@o405363.ingest.sentry.io/5270833
     deploy-env: ${DEPLOY:V2}

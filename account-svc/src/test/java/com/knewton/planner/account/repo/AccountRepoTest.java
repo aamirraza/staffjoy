@@ -34,10 +34,10 @@ public class AccountRepoTest {
     public void setUp() {
         newAccount = Account.builder()
                 .name("testAccount")
-                .email("test@staffjoy.net")
+                .email("test@planner.net")
                 .memberSince(LocalDateTime.of(2019, 1, 20, 12, 50).atZone(ZoneId.systemDefault()).toInstant())
                 .confirmedAndActive(false)
-                .photoUrl("https://staffjoy.xyz/photo/test.png")
+                .photoUrl("https://planner.xyz/photo/test.png")
                 .phoneNumber("18001801266")
                 .support(false)
                 .build();
@@ -63,7 +63,7 @@ public class AccountRepoTest {
     @Test
     public void findAccountByEmail() {
         // not existing
-        Account foundAccount = accountRepo.findAccountByEmail("notexisting@staffjoy.net");
+        Account foundAccount = accountRepo.findAccountByEmail("notexisting@planner.net");
         assertNull(foundAccount);
 
         accountRepo.save(newAccount);
@@ -121,7 +121,7 @@ public class AccountRepoTest {
 
         Account toUpdateAccount = newAccount;
         toUpdateAccount.setName("update");
-        toUpdateAccount.setEmail("update@staffjoy.xyz");
+        toUpdateAccount.setEmail("update@planner.xyz");
         accountRepo.save(toUpdateAccount);
         Account updatedAccount = accountRepo.save(toUpdateAccount);
         Account foundAccount = accountRepo.findById(updatedAccount.getId()).get();
@@ -130,7 +130,7 @@ public class AccountRepoTest {
         toUpdateAccount.setConfirmedAndActive(true);
         toUpdateAccount.setSupport(true);
         toUpdateAccount.setPhoneNumber("19001900190");
-        toUpdateAccount.setPhotoUrl("http://staffjoy.net/photo/update.png");
+        toUpdateAccount.setPhotoUrl("http://planner.net/photo/update.png");
         updatedAccount = accountRepo.save(toUpdateAccount);
         foundAccount = accountRepo.findById(updatedAccount.getId()).get();
         assertEquals(updatedAccount, foundAccount);
@@ -143,7 +143,7 @@ public class AccountRepoTest {
         assertEquals(1, accountRepo.count());
         assertFalse(account.isConfirmedAndActive());
 
-        String toUpdateEmail = "update@staffjoy.xyz";
+        String toUpdateEmail = "update@planner.xyz";
         int result = accountRepo.updateEmailAndActivateById(toUpdateEmail, newAccount.getId());
         assertEquals(1, result);
 

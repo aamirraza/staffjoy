@@ -14,7 +14,7 @@
     <artifactId>company-svc</artifactId>
     <name>Planner-Company-Svc</name>
     <version>1.0.0</version>
-    <url>https://www.staffjoy.xyz</url>
+    <url>https://www.planner.xyz</url>
  
     <dependencies>
         <dependency>

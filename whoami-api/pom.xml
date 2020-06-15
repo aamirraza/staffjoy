@@ -7,12 +7,12 @@
  
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
  
     <artifactId>whoami-api</artifactId>
-    <name>Staffjoy-WhoAmI-API</name>
+    <name>Planner-WhoAmI-API</name>
     <version>1.0.0</version>
     <description>WhoAmI API/DTO for sharing between Client/Server</description>
  

@@ -7,7 +7,7 @@ public class BotConstant {
     public static final String ONBOARDING_SMS_TEMPLATE_CODE_2 = "SMS_153055066";
     public static final String ONBOARDING_SMS_TEMPLATE_CODE_3 = "SMS_153055067";
 
-    public static final String ONBOARDING_EMAIL_TEMPLATE = "<div>%s Your manager just added you to %s on Staffjoy to share your work schedule.</div><br/><br/><div>When your manager publishes your shifts, we'll send them to you here. (To disable Staffjoy messages, reply STOP at any time)</div><br/><br/><div>Click <a href=\"%s\">this link</a> to sync your shifts to your phone's calendar app.</div>";
+    public static final String ONBOARDING_EMAIL_TEMPLATE = "<div>%s Your manager just added you to %s on Planner  to share your work schedule.</div><br/><br/><div>When your manager publishes your shifts, we'll send them to you here. (To disable Planner  messages, reply STOP at any time)</div><br/><br/><div>Click <a href=\"%s\">this link</a> to sync your shifts to your phone's calendar app.</div>";
     public static final String GREETING_EMAIL_TEMPLATE = "<div>Welcome to Staffjoy!</div>";
 
     public static final String ALERT_NEW_SHIFT_SMS_TEMPLATE_CODE = "SMS_153055068";

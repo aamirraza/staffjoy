@@ -27,7 +27,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiEndPointsInfo() {
         return new ApiInfoBuilder().title("Company REST API")
-                .description("Staffjoy Company REST API")
+                .description("Planner  Company REST API")
                 .contact(new Contact("bobo", "https://github.com/jskillcloud", "bobo@jskillcloud.com"))
                 .license("The MIT License")
                 .licenseUrl("https://opensource.org/licenses/MIT")

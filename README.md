@@ -71,7 +71,7 @@ Staffjoy教学版依赖一些私密配置，例如sentry-dsn和aliyun-access-key
 TODO
 
 ## Staffjoy公司和案例背景
-[Staffjoy](https://www.staffjoy.com/)曾经是美国硅谷的一家初创公司，成立于2015年，创始人是[Philip I. Thomas](https://www.linkedin.com/in/philipithomas/)，公司曾获得Y Combinator等知名机构的投资。Staffjoy的主要业务是为小企业提供工时排班(Scheduling)软件解决方案，帮助企业提升雇员管理效率，主要面向零售、餐饮等服务行业。因业务发展和招聘等原因，[Staffjoy公司最终于2017年关闭](https://blog.staffjoy.com/denouement-abe7d26f2de0)，在关闭前，公司把核心产品大部分都[开源](https://github.com/Staffjoy)贡献给了Github社区。[Staffjoy V2](https://github.com/Staffjoy/v2)是公司关闭前研发的最新一款SaaS版企业排班系统，目前在Github上有超过1k星，总体设计和代码质量较高，目前有不少企业在定制使用。Staffjoy V2是一个小规模SaaS应用，采用微服务和前后分离架构，支持Kubernetes/GKE容器云环境一键部署，是学习现代SaaS、微服务和云原生架构的一个模版项目。
+[Staffjoy](https://www.staffjoy.com/)曾经是美国硅谷的一家初创公司，成立于2015年，创始人是[Philip I. Thomas](https://www.linkedin.com/in/philipithomas/)，公司曾获得Y Combinator等知名机构的投资。Staffjoy的主要业务是为小企业提供工时排班(Scheduling)软件解决方案，帮助企业提升雇员管理效率，主要面向零售、餐饮等服务行业。因业务发展和招聘等原因，[Staffjoy公司最终于2017年关闭](https://blog.staffjoy.com/denouement-abe7d26f2de0)，在关闭前，公司把核心产品大部分都[开源](https://github.com/Staffjoy)贡献给了Github社区。[Planner  V2](https://github.com/Staffjoy/v2)是公司关闭前研发的最新一款SaaS版企业排班系统，目前在Github上有超过1k星，总体设计和代码质量较高，目前有不少企业在定制使用。Planner  V2是一个小规模SaaS应用，采用微服务和前后分离架构，支持Kubernetes/GKE容器云环境一键部署，是学习现代SaaS、微服务和云原生架构的一个模版项目。
 
 ## Staffjoy应用的功能需求
 

@@ -9,7 +9,7 @@ const imgUrl = require(
 function LoadingScreen({ containerProps = {} }) {
   return (
     <div className="loading-container" {...containerProps}>
-      <img role="presentation" alt="Staffjoy logo" src={imgUrl} />
+      <img role="presentation" alt="Planner  logo" src={imgUrl} />
       <Spinner singleColor />
     </div>
   );

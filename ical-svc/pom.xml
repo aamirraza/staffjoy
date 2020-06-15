@@ -7,14 +7,14 @@
 
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>ical-svc</artifactId>
-    <name>Staffjoy-ICal-Svc</name>
+    <name>Planner-ICal-Svc</name>
     <version>1.0.0</version>
-    <description>ICal project for Staffjoy microservices demo</description>
+    <description>ICal project for Planner  microservices demo</description>
 
     <dependencies>
 

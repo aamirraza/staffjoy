@@ -33,7 +33,7 @@ public class Cal {
         header.append("BEGIN:VCALENDAR\r\n");
         header.append("METHOD:PUBLISH\r\n");
         header.append("VERSION:2.0\r\n");
-        header.append("PRODID:-//Staffjoy//Staffjoy ICal Service//EN\r\n");
+        header.append("PRODID:-//Staffjoy//Planner  ICal Service//EN\r\n");
         return header.toString();
     }
 

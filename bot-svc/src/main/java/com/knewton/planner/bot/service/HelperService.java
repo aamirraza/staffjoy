@@ -186,7 +186,7 @@ public class HelperService {
     void mailGreetingAsync(AccountDto accountDto) {
         String email = accountDto.getEmail();
         String name = accountDto.getName();
-        String subject = "Staffjoy Greeting";
+        String subject = "Planner  Greeting";
         String htmlBody = BotConstant.GREETING_EMAIL_TEMPLATE;
         this.sendMail(email, name, subject, htmlBody);
     }
@@ -238,8 +238,8 @@ public class HelperService {
 
         // TODO crate sms template on aliyun then update code
 //        String[] onboardingMessages = {
-//                String.format("%s Your manager just added you to %s on Staffjoy to share your work schedule.", HelperService.getGreet(HelperService.getFirstName(account.getName())), companyDto.getName()),
-//                "When your manager publishes your shifts, we'll send them to you here. (To disable Staffjoy messages, reply STOP at any time)",
+//                String.format("%s Your manager just added you to %s on Planner  to share your work schedule.", HelperService.getGreet(HelperService.getFirstName(account.getName())), companyDto.getName()),
+//                "When your manager publishes your shifts, we'll send them to you here. (To disable Planner  messages, reply STOP at any time)",
 //                String.format("Click this link to sync your shifts to your phone's calendar app: %s", icalURI.toString())
 //        };
         Map<String, String> onboardingMessageMap = new HashMap<String, String>() {{

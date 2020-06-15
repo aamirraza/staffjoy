@@ -84,7 +84,7 @@ module.exports = {
             // favicon background color
             background: '#fff',
             // favicon app title
-            title: 'Staffjoy | App',
+            title: 'Planner  | App',
 
             // which icons should be generated
             icons: {

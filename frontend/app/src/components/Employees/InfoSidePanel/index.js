@@ -9,7 +9,7 @@ function InfoSidePanel() {
 
   return (
     <div className="employee-side-panel">
-      <h3>Staffjoy Employees</h3>
+      <h3>Planner  Employees</h3>
       <p>{body}</p>
     </div>
   );

@@ -63,7 +63,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Staffjoy | My Account",
+            title: "Planner  | My Account",
             template: "index.template.ejs",
             inject: "body",
         }),
@@ -76,7 +76,7 @@ module.exports = {
             // favicon background color
             background: '#fff',
             // favicon app title
-            title: 'Staffjoy | App',
+            title: 'Planner  | App',
 
             // which icons should be generated
             icons: {

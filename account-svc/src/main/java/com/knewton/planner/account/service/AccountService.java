@@ -142,7 +142,7 @@ public class AccountService {
                 emailName = "there";
             }
 
-            String subject = "Activate your Staffjoy account";
+            String subject = "Activate your Planner  account";
             this.sendEmail(account.getId(), email, emailName, subject, AccountConstant.ACTIVATE_ACCOUNT_TMPL, true);
         }
 
@@ -324,13 +324,13 @@ public class AccountService {
             throw new ServiceException(ResultCode.NOT_FOUND, "No user with that email exists");
         }
 
-        String subject = "Reset your Staffjoy password";
+        String subject = "Reset your Planner  password";
         boolean activate = false; // reset
         String tmpl = AccountConstant.RESET_PASSWORD_TMPL;
         if (!account.isConfirmedAndActive()) {
             // Not actually active - make some tweaks for activate instead of password reset
             activate = true; // activate
-            subject = "Activate your Staffjoy account";
+            subject = "Activate your Planner  account";
             tmpl = AccountConstant.ACTIVATE_ACCOUNT_TMPL;
         }
 

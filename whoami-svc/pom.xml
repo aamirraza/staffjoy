@@ -7,14 +7,14 @@
 
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>whoami-svc</artifactId>
-    <name>Staffjoy-WhoAmI-Svc</name>
+    <name>Planner-WhoAmI-Svc</name>
     <version>1.0.0</version>
-    <description>WhoAmI project for Staffjoy MicroServices demo</description>
+    <description>WhoAmI project for Planner  MicroServices demo</description>
 
     <dependencies>
         <dependency>

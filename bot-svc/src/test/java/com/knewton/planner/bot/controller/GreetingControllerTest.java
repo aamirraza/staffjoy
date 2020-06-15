@@ -72,7 +72,7 @@ public class GreetingControllerTest {
         EmailRequest emailRequest = argument.getValue();
         assertThat(emailRequest.getTo()).isEqualTo(accountDto.getEmail());
         assertThat(emailRequest.getName()).isEqualTo(accountDto.getName());
-        assertThat(emailRequest.getSubject()).isEqualTo("Staffjoy Greeting");
+        assertThat(emailRequest.getSubject()).isEqualTo("Planner  Greeting");
         assertThat(emailRequest.getHtmlBody()).isEqualTo(BotConstant.GREETING_EMAIL_TEMPLATE);
     }
 

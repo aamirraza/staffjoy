@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.knewton.planner</groupId>
-    <artifactId>staffjoy-parent</artifactId>
+    <artifactId>planner-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>Staffjoy MicroServices Training Project</name>
+    <name>Planner  MicroServices Training Project</name>
     <url>https://www.staffjoy.xyz</url>
  
     <properties>

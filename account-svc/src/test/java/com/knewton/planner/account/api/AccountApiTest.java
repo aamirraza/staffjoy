@@ -186,7 +186,7 @@ public class AccountApiTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         String externalApex = "staffjoy-v2.local";
         ArgumentCaptor<EmailRequest> argument = ArgumentCaptor.forClass(EmailRequest.class);
         // 2 times, 1 for account creation, 1 for password reset
@@ -214,7 +214,7 @@ public class AccountApiTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify
-        subject = "Reset your Staffjoy password";
+        subject = "Reset your Planner  password";
         argument = ArgumentCaptor.forClass(EmailRequest.class);
         // 3 times, 1 for account creation, 2 for password reset
         verify(mailClient, times(3)).send(argument.capture());
@@ -506,7 +506,7 @@ public class AccountApiTest {
         String name = "testAccount001";
         String email = "test001@staffjoy.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -543,7 +543,7 @@ public class AccountApiTest {
         String name = "testAccount001";
         String email = "test001@staffjoy.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -577,7 +577,7 @@ public class AccountApiTest {
         String name = "testAccount001";
         String email = "test001@staffjoy.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -731,7 +731,7 @@ public class AccountApiTest {
         String name = "testAccount";
         String email = "test@staffjoy.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -769,7 +769,7 @@ public class AccountApiTest {
         String name = "testAccount001";
         String email = "test01@staffjoy.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)

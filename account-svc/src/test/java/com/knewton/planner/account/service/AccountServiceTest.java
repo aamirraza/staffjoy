@@ -74,7 +74,7 @@ public class AccountServiceTest {
         String userId = UUID.randomUUID().toString();
         String email = "test@jskillcloud.com";
         String name = "test_name";
-        String subject = "Activate your Staffjoy account";
+        String subject = "Activate your Planner  account";
         String template = AccountConstant.ACTIVATE_ACCOUNT_TMPL;
         boolean activateOrConfirm = true;
 
@@ -104,7 +104,7 @@ public class AccountServiceTest {
         assertThat(StringUtils.countMatches(emailRequest.getHtmlBody(), name)).isEqualTo(1);
         assertThat(emailRequest.getHtmlBody()).startsWith("<div>Hi");
 
-        subject = "Reset your Staffjoy password";
+        subject = "Reset your Planner  password";
         template = AccountConstant.RESET_PASSWORD_TMPL;
         accountService.sendEmail(userId, email, name, subject, template, false);
 

@@ -7,12 +7,12 @@
 
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>bot-api</artifactId>
-    <name>Staffjoy-Bot-API</name>
+    <name>Planner-Bot-API</name>
     <version>1.0.0</version>
     <description>Bot API/DTO for sharing between Client/Server</description>
 

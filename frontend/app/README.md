@@ -2,7 +2,7 @@
 
 ## Configuring for Webpack Dev Server Development
 
-Running the full Staffjoy stack is too demanding for most frontend development flows.
+Running the full Planner  stack is too demanding for most frontend development flows.
 TBD - local commit necessary to configure uat as API endpoint.
 
 ## Cutting Build for Production

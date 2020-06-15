@@ -7,14 +7,14 @@
 
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>faraday</artifactId>
-    <name>Staffjoy-Proxy</name>
+    <name>Planner-Proxy</name>
     <version>1.0.0</version>
-    <description>Proxy or Gateway, Aka. Central Traffic Entry Point for Staffjoy MicroServices and Apps</description>
+    <description>Proxy or Gateway, Aka. Central Traffic Entry Point for Planner  MicroServices and Apps</description>
 
     <dependencies>
         <dependency>

@@ -7,7 +7,7 @@ import {
   ENV_NAME_PRODUCTION,
 } from './config';
 
-// apex for the various staffjoy environments
+// apex for the various planner environments
 export const DEVELOPMENT_APEX = '.staffjoy-v2.local';
 export const UAT_APEX = '.staffjoy-uat.xyz';
 export const PRODUCTION_APEX = '.staffjoy.xyz';

@@ -18,7 +18,7 @@ spring:
 
 staffjoy:
   common:
-    sentry-dsn: ${SENTRY_DSN}
+    sentry-dsn: https://b3230c38171d485a8e96ac0039b9e467@o405363.ingest.sentry.io/5270833
     deploy-env: ${DEPLOY:V2}
   signing-secret: ${SIGNING_SECRET}
   email-service-endpoint: ${EMAIL_SERVICE_ENDPOINT:http://email-service:8080}

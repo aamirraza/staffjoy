@@ -21,7 +21,7 @@ public class AuthConstant {
     // a request is being made by the account service
     public static final String AUTHORIZATION_ACCOUNT_SERVICE = "account-service";
     // AUTHORIZATION_SUPPORT_USER is set as the Authorization header to denote that
-    // a request is being made by a Staffjoy team member
+    // a request is being made by a Planner  team member
     public static final String AUTHORIZATION_SUPPORT_USER = "faraday-support";
     // AUTHORIZATION_SUPERPOWERS_SERVICE is set as the Authorization header to
     // denote that a request is being made by the dev-only superpowers service

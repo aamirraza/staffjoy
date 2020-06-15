@@ -14,7 +14,7 @@ function NavigationLogo({ companyId }) {
   const route = getRoute(COMPANY_BASE, { companyId });
   return (
     <Link to={route} id="navigation-logo">
-      <img role="presentation" alt="Staffjoy logo" src={imgUrl} />
+      <img role="presentation" alt="Planner  logo" src={imgUrl} />
     </Link>
   );
 }

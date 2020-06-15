@@ -7,12 +7,12 @@
  
     <parent>
         <groupId>com.knewton.planner</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <artifactId>planner-parent</artifactId>
         <version>1.0</version>
     </parent>
  
     <artifactId>common-lib</artifactId>
-    <name>Staffjoy-Common-Library</name>
+    <name>Planner-Common-Library</name>
     <version>1.0.1</version>
 
     <dependencies>

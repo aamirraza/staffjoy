@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.validation.constraints.NotNull;
 
-@ConfigurationProperties(prefix="staffjoy")
+@ConfigurationProperties(prefix="planner")
 @Data
 @Builder
 @NoArgsConstructor

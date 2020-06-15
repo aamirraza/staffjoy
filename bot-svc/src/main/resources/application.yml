@@ -8,7 +8,7 @@ spring:
 
 planner:
   common:
-    sentry-dsn: ${SENTRY_DSN}
+    sentry-dsn: https://b3230c38171d485a8e96ac0039b9e467@o405363.ingest.sentry.io/5270833
     deploy-env: ${DEPLOY:V2}
   email-service-endpoint: ${EMAIL_SERVICE_ENDPOINT:http://email-service:8080}
   sms-service-endpoint: ${SMS_SERVICE_ENDPOINT:http://sms-service:8080}

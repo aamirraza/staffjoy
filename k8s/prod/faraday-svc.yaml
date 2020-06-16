@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: faraday-svc
-          image: boboweike/faraday-svc
+          image: planner/faraday-svc
           ports:
             - name: http-port
               containerPort: 80

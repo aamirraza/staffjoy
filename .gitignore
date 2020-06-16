@@ -39,3 +39,5 @@ k8s/prod/config.yaml
 k8s/uat/config.yaml
 hs_err_*.log
 replay_*.log
+/.vagrant/
+ubuntu-bionic-18.04-cloudimg-console.log

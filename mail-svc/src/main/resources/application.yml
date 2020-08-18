@@ -8,7 +8,7 @@ spring:
 
 planner:
   common:
-    sentry-dsn: https://b3230c38171d485a8e96ac0039b9e467@o405363.ingest.sentry.io/5270833
+    sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}
   aliyun-access-key: ${ALIYUN_ACCESS_KEY}
   aliyun-access-secret: ${ALIYUN_ACCESS_SECRET}

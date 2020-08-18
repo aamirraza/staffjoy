@@ -8,7 +8,7 @@ spring:
 
 planner:
   common:
-    sentry-dsn: https://b3230c38171d485a8e96ac0039b9e467@o405363.ingest.sentry.io/5270833
+    sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}
   company-service-endpoint: ${COMPANY_SERVICE_ENDPOINT:http://company-service:8080}
   account-service-endpoint: ${ACCOUNT_SERVICE_ENDPOINT:http://account-service:8080}

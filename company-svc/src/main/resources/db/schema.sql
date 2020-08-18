@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS directory (
                            CONSTRAINT ix_directory_company_user_internal_id UNIQUE (company_id, user_id, internal_id)
 ) ;
 
-create index ix_directory_company_id on directory (company_id);
-create index ix_directory_user_id on directory (user_id);
-create index ix_directory_internal_id on directory (internal_id);
+create index IF NOT EXISTS ix_directory_company_id on directory (company_id);
+create index IF NOT EXISTS ix_directory_user_id on directory (user_id);
+create index IF NOT EXISTS ix_directory_internal_id on directory (internal_id);
 
 CREATE TABLE IF NOT EXISTS admin (
                        id VARCHAR(255),
@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS admin (
                        CONSTRAINT ix_admin_company_user_id UNIQUE (company_id, user_id)
 ) ;
 
-CREATE INDEX ix_admin_company_id ON admin (company_id);
-CREATE INDEX ix_admin_user_id ON admin (user_id);
+CREATE INDEX IF NOT EXISTS ix_admin_company_id ON admin (company_id);
+CREATE INDEX IF NOT EXISTS ix_admin_user_id ON admin (user_id);
 
 CREATE TABLE IF NOT EXISTS team (
                       id VARCHAR(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS team (
                       PRIMARY KEY (id)
 ) ;
 
-CREATE INDEX ix_team_company_id ON team (company_id);
+CREATE INDEX IF NOT EXISTS ix_team_company_id ON team (company_id);
 
 CREATE TABLE IF NOT EXISTS worker (
                         id VARCHAR(255),
@@ -55,8 +55,8 @@ CREATE TABLE IF NOT EXISTS worker (
                         CONSTRAINT ix_worker_team_user_id UNIQUE (team_id, user_id)
 ) ;
 
-CREATE INDEX ix_team_team_id ON worker (team_id);
-CREATE INDEX ix_team_user_id ON worker (user_id);
+CREATE INDEX IF NOT EXISTS ix_team_team_id ON worker (team_id);
+CREATE INDEX IF NOT EXISTS ix_team_user_id ON worker (user_id);
 
 CREATE TABLE IF NOT EXISTS job (
                      id VARCHAR(255) NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS job (
                      PRIMARY KEY (id)
 ) ;
 
-CREATE INDEX ix_job_team_id ON job (team_id);
+CREATE INDEX IF NOT EXISTS ix_job_team_id ON job (team_id);
 
 
 CREATE TABLE IF NOT EXISTS shift (
@@ -76,10 +76,10 @@ CREATE TABLE IF NOT EXISTS shift (
                                    job_id VARCHAR(255) NOT NULL DEFAULT '',
                                    user_id VARCHAR(255) NOT NULL DEFAULT '',
                                    published boolean NOT NULL DEFAULT false,
-                                   start TIMESTAMP(0) NOT NULL DEFAULT current_timestamp,
-                                   stop TIMESTAMP(0) NOT NULL DEFAULT current_timestamp,
+                                   start TIMESTAMP NOT NULL DEFAULT current_timestamp,
+                                   stop TIMESTAMP NOT NULL DEFAULT current_timestamp,
                                    PRIMARY KEY (id)
 ) ;
 
-CREATE INDEX ix_job_shift_id ON shift (job_id);
-CREATE INDEX ix_job_user_id ON shift (user_id);
+CREATE INDEX IF NOT EXISTS ix_job_shift_id ON shift (job_id);
+CREATE INDEX IF NOT EXISTS ix_job_user_id ON shift (user_id);

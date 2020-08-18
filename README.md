@@ -1,49 +1,49 @@
-# Staffjoy教学版
-微服务和云原生架构教学案例项目，基于Spring Boot和Kubernetes技术栈
+# Staffjoy Teaching Edition
+Microservice and cloud native architecture teaching case project, based on Spring Boot and Kubernetes technology stack
 
-## 课程资料PPT
-1. 第一章 [课程介绍和案例需求](doc/ppts/Chapter_01.pdf)
-2. 第二章 [系统架构设计和技术栈选型](doc/ppts/Chapter_02.pdf)
-3. 附：[课程参考资料链接](doc/reference.md)
+## Course Information PPT
+1. Chapter 1 [Course Introduction and Case Requirements] (doc/ppts/Chapter_01.pdf)
+2. Chapter 2 [System Architecture Design and Technology Stack Selection] (doc/ppts/Chapter_02.pdf)
+3. Attached: [Course Reference Material Link](doc/reference.md)
 
-## 项目初衷
+## Original intention of the project
 
-微服务和云原生架构是目前互联网行业的技术热点，相关资料文档很多，但是缺乏端到端的贴近生产的案例，这就使得很多互联网开发人员(包括架构师)，虽然学习了很多微服务理论，但是在真正落地实施微服务云原生架构的时候，仍然会感到困惑。为此，我利用业余时间，通过改造一个叫[Staffjoy](https://github.com/staffjoy/v2)的开源项目，开发了这个教学版的案例项目。整个项目采用微服务架构，并且可以一键部署到Kubernetes容器云环境。最近我和极客时间合作，基于这个案例项目开发了一门课程《Spring Boot 与 Kubernetes 微服务实践 ～ 全面掌握云原生应用的架构设计与实现》，参考[课程大纲](doc/syllabus.md)。希望通过实际案例项目和课程的学习，让开发人员/架构师不仅能够深入理解微服务和云原生架构原理，同时能够在生产实践中真正地去落地实施微服务和云原生架构。也希望这个项目成为微服务云原生架构的一个参考模版，进一步可以作为类似项目的脚手架。
+Microservices and cloud-native architectures are the current technical hotspots in the Internet industry. There are many related documents, but there is a lack of end-to-end production-oriented cases. This makes many Internet developers (including architects), although they have learned a lot of microservice theories, But when it comes to implementing the cloud-native microservice architecture, it is still confusing. To this end, I used my spare time to develop this teaching version of the case project by transforming an open source project called [Staffjoy](https://github.com/staffjoy/v2). The entire project adopts a microservice architecture and can be deployed to the Kubernetes container cloud environment with one click. Recently, I cooperated with geeks and developed a course "Spring Boot and Kubernetes Microservice Practice-Comprehensively Master the Architecture Design and Implementation of Cloud Native Applications" based on this case project, refer to [course outline](doc/syllabus.md) . It is hoped that through the learning of actual case projects and courses, developers/architects can not only deeply understand the principles of microservices and cloud native architecture, but also be able to truly implement microservices and cloud native architecture in production practice. I also hope that this project will become a reference template for the cloud native architecture of microservices, and further serve as a scaffolding for similar projects.
 
-## 课程目标
+## Course targets
 
-通过具体案例的形式，教大家使用SpringBoot框架，开发一个贴近生产的微服务应用，并一键部署到Kubernetes容器云环境，帮助大家：
+In the form of specific cases, teach you how to use the SpringBoot framework to develop a microservice application close to production, and deploy it to the Kubernetes container cloud environment with one click to help you:
 
-1. 掌握如何在实践中设计微服务架构和前后分离架构
-2. 掌握如何基于SpringBoot搭建微服务基础框架
-3. 掌握SpringBoot测试技术和相关实践
-4. 掌握服务容器化和容器云部署相关实践
-5. 进一步提升Java/Spring微服务开发技能
-6. 理解可运维架构理念和相关实践
-7. 理解如何架构和设计一个SaaS多租户应用
-8. 理解云时代的DevOps工程实践
+1. Master how to design microservice architecture and front-rear separation architecture in practice
+2. Master how to build a microservice basic framework based on SpringBoot
+3. Master SpringBoot testing technology and related practices
+4. Master the relevant practices of service containerization and container cloud deployment
+5. Further improve Java/Spring microservice development skills
+6. Understand the concept of operational and maintenance architecture and related practices
+7. Understand how to structure and design a SaaS multi-tenant application
+8. Understand DevOps engineering practices in the cloud era
 
-## 项目架构
+## Project structure
 
 ![arch](doc/images/arch.jpg)
 
-* **Account API(账户服务)**，提供账户注册、登录认证和账户信息管理等基本功能。
-* **Company API(公司服务)**，支持团队(Team)，雇员(Worker)，任务(Job）和班次(Shift)等核心领域概念的管理功能。
-* **Bot API**，是一个消息转发服务，它一方面作为队列可以缓冲高峰期的大量通知消息，另一方面作为代理可以屏蔽将来可能的通知方式的变更。
-* **Mail Sender和SMS Sender**，都是消息通知服务，分别支持邮件和短信通知方式，它们可以对接各种云服务，比如阿里云邮件或短信服务。
-* **WhoAmI API**，支持前端应用获取当前登录用户的详情信息，包括公司和管理员身份，团队信息等，它也可以看作是一个用户会话(Session)信息服务。
-* **App(也称MyCompany)**，单页SPA应用，是整个Staffjoy应用的主界面，公司管理员通过它管理公司、雇员、任务和排班等信息。
-* **MyAccount** ，单页SPA应用，它主要支持公司雇员管理个人信息，包括邮件和电话等，方便接收排班通知消息。
-* **WWW应用**， 是一个前端MVC应用，它主要支持产品营销、公司介绍和用户注册登录/登出，这个应用也称为营销站点(Marketing Site)或者登录页(Landing Page)应用。
-* **Faraday(法拉弟)**，是一个反向代理(功能类似nginx)，也可以看作是一个网关(功能类似zuul)，它是用户访问Staffjoy微服务应用的流量入口，它既实现对前端应用和后端API的路由访问，也实现登录鉴权和访问控制等安全功能。Faraday代理是Staffjoy微服务架构和前后分离架构的关键，并且它是唯一具有公网IP的服务。
+* **Account API (account service)** provides basic functions such as account registration, login authentication and account information management.
+* **Company API (company service)**, support the management function of the core concept of team (Team), employee (Worker), task (Job) and shift (Shift).
+* **Bot API** is a message forwarding service. On the one hand, it acts as a queue to buffer a large number of notification messages during peak periods, and on the other hand, as a proxy, it can shield possible future notification changes.
+* **Mail Sender and SMS Sender**, both of which are message notification services, support email and SMS notification methods respectively. They can be connected to various cloud services, such as Alibaba Cloud email or SMS services.
+* **WhoAmI API**, supports front-end applications to obtain detailed information of the currently logged in user, including company and administrator identities, team information, etc. It can also be regarded as a user session information service.
+* **App (also known as MyCompany)**, a single-page SPA application, is the main interface of the entire Staffjoy application, through which the company administrator manages the company, employees, tasks, and schedule information.
+* **MyAccount**, a single-page SPA application, it mainly supports company employees to manage personal information, including emails and phone calls, etc., to facilitate receiving schedule notification messages.
+* **WWW application**, is a front-end MVC application, which mainly supports product marketing, company introduction and user registration and login/logout. This application is also called Marketing Site or Landing Page application.
+* **Faraday (Faraday)**, is a reverse proxy (functions similar to nginx), can also be seen as a gateway (functions similar to zuul), it is the traffic entrance for users to access Staffjoy microservice applications, and it is implemented Routing access to front-end applications and back-end APIs also implements security functions such as login authentication and access control. Faraday proxy is the key to Staffjoy's microservice architecture and front-rear separation architecture, and it is the only service with public IP.
 
-Staffjoy微服务间通讯，包括对外暴露API，全部采用JSON over HTTP标准方式。
+The communication between Staffjoy microservices, including the external exposure API, all adopt the JSON over HTTP standard method.
 
 ![skywalking](doc/images/skywalking.png)
 
-上图是经过调用链埋点监控后，在Skywalking Dashboard上实时呈现出来的服务依赖关系图，这个依赖图和总体架构设计保持一致。
+The above picture is the service dependency graph displayed in real time on the Skywalking Dashboard after the call chain buried point monitoring. This dependency graph is consistent with the overall architecture design.
 
-## 项目技术栈
+## Project Technology Stack
 
 * Spring Boot
 * Spring REST
@@ -54,54 +54,54 @@ Staffjoy微服务间通讯，包括对外暴露API，全部采用JSON over HTTP�
 * Docker Compose
 * Kubernetes
 
-Staffjoy教学版所采用的技术栈都是目前行业主流，数量不多，如上面架构图所标示。所有微服务(绿色标注)采用**Spring REST**开发，有数据访问交互的采用**Spring Data JPA**，数据库使用**MySQL**。WWW服务使用**Spring MVC+Thymeleaf**模版引擎开发。Faraday也是一个**SpringBoot**应用，内部路由和安全等逻辑基于**Servlet Filter**实现。两个单页SPA应用(暗红色标注)都是采用**ReactJs+Redux**框架开发。整个应用支持一键部署到本地**Docker Compose**环境，也支持一键部署到**Kubernetes**容器云环境，所以Staffjoy的整体架构是支持云原生的微服务架构。
+The technology stacks used in the Staffjoy Education Edition are all mainstream in the current industry, and the number is small, as indicated in the architecture diagram above. All microservices (marked in green) are developed using **Spring REST**, those with data access interaction use **Spring Data JPA**, and the database uses **MySQL**. WWW service is developed using **Spring MVC+Thymeleaf** template engine. Faraday is also a **SpringBoot** application, with internal routing and security logic based on **Servlet Filter**. Both single-page SPA applications (marked in dark red) are developed using the **ReactJs+Redux** framework. The entire application supports one-click deployment to the local **Docker Compose** environment, and also supports one-click deployment to the **Kubernetes** container cloud environment, so the overall architecture of Staffjoy supports cloud-native microservice architecture.
 
-## 关于项目的进一步说明
+## Further explanation about the project
 
-1. 教学版Staffjoy和原版Staffjoy在功能、设计和实现逻辑上基本保持一致，但教学版在原版基础上做了一些改造，以适应教学需要。首先，在开发语言框架上，原版Staffjoy用Golang/Grpc实现微服务，教学版Staffjoy则改造为用国内更主流的Spring(Boot)实现微服务；其次，在架构上，原版Staffjoy因为使用Grpc开发微服务，为了将Rpc服务暴露成HTTP/REST服务，它多一个对应的Grpc API Gateway转换层服务，而教学版Staffjoy因为使用Spring(Boot)开发，直接支持HTTP/REST接口，所以不需要独立转换层服务；第三，原版Staffjoy默认使用SMS短信发送排班通知信息，但在国内开通短信服务需要审批，比较麻烦，所以在教学版Staffjoy中，排班通知默认调整为邮件方式，方便测试和演示。学习理解了Spring(Boot)教学版Staffjoy，很容易理解原版Golang/Grpc开发的Staffjoy，对原版有兴趣的学员可以直接看官方[源码](https://github.com/Staffjoy/v2)。
-2. 开发和运行教学版Staffjoy，需要安装一些必要的开发工具(操作系统不限)，包括JDK8，Maven依赖管理工具，Intellij IDEA或者Eclipse STS IDE，MySQL数据库和MySQL Workbench管理工具，Nodejs/npm前端开发框架，Postman API测试工具，以及Docker运行时环境。因为Staffjoy服务较多，如果要在本机跑，建议物理内存**不少于16G**。
-3. 教学版的Staffjoy虽然是一个较完整的SaaS应用，并且架构设计中考虑了很多生产性环节，但是它仍然只是一个教学演示项目，仅供学习参考，如果你要将它进行生产化应用(或者基于它的代码做其它项目的脚手架)，则仍然需要对其进行严格测试和定制扩展。大家在学习或使用教学版Staffjoy过程中，如果发现有bug，或者对项目有完善扩展建议，欢迎提交github issue.
+1. The teaching version of Staffjoy and the original version of Staffjoy are basically the same in function, design and implementation logic, but the teaching version has made some modifications on the basis of the original version to meet the needs of teaching. First, in the development language framework, the original Staffjoy uses Golang/Grpc to implement microservices, while the teaching version of Staffjoy is transformed to use the more mainstream Spring (Boot) to implement microservices in China; secondly, in terms of architecture, the original Staffjoy uses Grpc to develop microservices. Service, in order to expose Rpc service as HTTP/REST service, it has a corresponding Grpc API Gateway conversion layer service, and the teaching version of Staffjoy uses Spring (Boot) development and directly supports HTTP/REST interface, so there is no need for a separate conversion layer Service; third, the original version of Staffjoy uses SMS to send scheduling notification information by default, but the SMS service in China requires approval, which is more troublesome. Therefore, in the teaching version of Staffjoy, the scheduling notification is adjusted to email by default, which is convenient for testing and demonstration. After learning and understanding Spring (Boot) teaching version of Staffjoy, it is easy to understand the original version of Staffjoy developed by Golang/Grpc. Students who are interested in the original version can directly look at the official [source code](https://github.com/Staffjoy/v2).
+2. To develop and run the teaching version of Staffjoy, you need to install some necessary development tools (the operating system is not limited), including JDK8, Maven dependency management tool, Intellij IDEA or Eclipse STS IDE, MySQL database and MySQL Workbench management tool, Nodejs/npm front-end Development framework, Postman API testing tool, and Docker runtime environment. Because there are many Staffjoy services, if you want to run on this machine, it is recommended that the physical memory ** not less than 16G**.
+3. Although the teaching version of Staffjoy is a relatively complete SaaS application, and a lot of production links are considered in the architecture design, it is still only a teaching demonstration project for learning reference only. If you want to use it for production ( Or scaffolding other projects based on its code), it still needs to be rigorously tested and customized extensions. In the process of learning or using the teaching version of Staffjoy, if you find a bug or have suggestions for improving the project, please submit a github issue.
 
-## 如何运行
+## How to run
 
-1. 配置文件
+1. Configuration file
 
-Staffjoy教学版依赖一些私密配置，例如sentry-dsn和aliyun-access-key等等，这些私密配置不能checkin到github上，所以采用了Spring的一种私密配置机制，私密数据集中配置在**config/application.yml**中，这个文件在gitignore中，不会被checkin到github。请参考config目录中的[application.yml.example](config/application.yml.example)文件和格式，在config目录中添加一个**appliction.yml**文件，其中填写你自己的私密配置。如果你暂时没有这些配置，可以暂时用假数据，直接把application.yml.example，改为application.yml，这样应用可以运行起来。注意，如果aliyun相关配置不配，则无法发送邮件或短信，sentry相关配置不配则无法发送异常数据到sentry，intercom不配则不能对接intercom客服系统，recaptcha暂未用可以不配。
+Staffjoy Education Edition relies on some private configurations, such as sentry-dsn and aliyun-access-key, etc. These private configurations cannot be checked in to github, so a private configuration mechanism of Spring is adopted. The private data is configured in **config/ In application.yml**, this file is in gitignore and will not be checked in to github. Please refer to the [application.yml.example](config/application.yml.example) file and format in the config directory, add an **appliction.yml** file in the config directory, and fill in your own private configuration. If you don't have these configurations for the time being, you can temporarily use fake data and directly change application.yml.example to application.yml so that the application can run. Note that if the aliyun-related configuration is not matched, you cannot send emails or text messages. If the sentry-related configuration is not matched, you cannot send abnormal data to sentry. If intercom is not matched, you cannot connect to the intercom customer service system. Recaptcha may not be matched if it is not used.
 
 TODO
 
-## Staffjoy公司和案例背景
-[Staffjoy](https://www.planner.com/)曾经是美国硅谷的一家初创公司，成立于2015年，创始人是[Philip I. Thomas](https://www.linkedin.com/in/philipithomas/)，公司曾获得Y Combinator等知名机构的投资。Staffjoy的主要业务是为小企业提供工时排班(Scheduling)软件解决方案，帮助企业提升雇员管理效率，主要面向零售、餐饮等服务行业。因业务发展和招聘等原因，[Staffjoy公司最终于2017年关闭](https://blog.planner.com/denouement-abe7d26f2de0)，在关闭前，公司把核心产品大部分都[开源](https://github.com/Staffjoy)贡献给了Github社区。[Planner  V2](https://github.com/Staffjoy/v2)是公司关闭前研发的最新一款SaaS版企业排班系统，目前在Github上有超过1k星，总体设计和代码质量较高，目前有不少企业在定制使用。Planner  V2是一个小规模SaaS应用，采用微服务和前后分离架构，支持Kubernetes/GKE容器云环境一键部署，是学习现代SaaS、微服务和云原生架构的一个模版项目。
+## Staffjoy company and case background
+[Staffjoy](https://www.staffjoy.com/) was a start-up company in Silicon Valley, USA, founded in 2015, the founder is [Philip I. Thomas](https://www.linkedin.com/in /philipithomas/), the company has received investment from well-known institutions such as Y Combinator. Staffjoy's main business is to provide small companies with software solutions for scheduling (Scheduling) to help companies improve employee management efficiency, mainly for retail, catering and other service industries. Due to business development and recruitment and other reasons, [Staffjoy was finally closed in 2017](https://blog.staffjoy.com/denouement-abe7d26f2de0). Before closing, the company put most of its core products [open source](https: //github.com/Staffjoy) contributed to the Github community. [Staffjoy V2](https://github.com/Staffjoy/v2) is the latest SaaS version of the enterprise scheduling system developed before the company closed. Currently, it has more than 1k stars on Github, and the overall design and code quality is high. At present, many companies are customizing. Staffjoy V2 is a small-scale SaaS application that uses microservices and a front-to-back separation architecture to support one-click deployment of Kubernetes/GKE container cloud environments. It is a template project for learning modern SaaS, microservices and cloud native architecture.
 
-## Staffjoy应用的功能需求
+## Functional requirements of Staffjoy application
 
-Staffjoy应用的业务功能相对简单，简单讲就是帮助小企业管理者管理雇员和排班，并以短信或者邮件等方式，将排班信息及时通知到雇员。具体讲，Staffjoy主要支持两类用户角色和用例，一类是公司管理员(admin)，他们可以通过Staffjoy管理公司(company)、员工目录(directory)，团队(team)和雇员(worker)，也可以创建任务(job)，创建和发布班次(shift)信息；另一类是公司雇员，他们可以通过Staffjoy管理电话和邮件等个人信息，便于接收到对应的排班通知。Staffjoy应用主要以共享版SaaS服务形式提供，也支持针对一些大客户的定制私有部署，这就要求Staffjoy应用易于部署和运维，要支持一键部署到GKE等容器云环境。另外，作为一款SaaS服务产品，良好的市场营销(Marketing)和客服是赢得用户的关键，所以Staffjoy需要提供营销友好的(Marketing Friendly)宣传和登录页(Landing Page)，也要支持对接主流的在线客服系统如Intercom。
+The business functions of the Staffjoy application are relatively simple. Simply put, it helps small business managers manage employees and schedules, and notify employees of schedule information in a timely manner by means of text messages or emails. Specifically, Staffjoy mainly supports two types of user roles and use cases. One is the company administrator (admin), who can manage the company (company), employee directory (directory), team (team) and employee (worker) through Staffjoy, and also You can create jobs, create and publish shift information; the other is company employees, who can manage personal information such as phone calls and emails through Staffjoy, so that they can receive corresponding shift notifications. The Staffjoy application is mainly provided in the form of a shared SaaS service, and it also supports customized private deployment for some large customers. This requires that the Staffjoy application is easy to deploy and maintain, and supports one-click deployment to container cloud environments such as GKE. In addition, as a SaaS service product, good marketing and customer service are the keys to winning users, so Staffjoy needs to provide marketing friendly promotion and landing pages, as well as support for mainstreaming Online customer service systems such as Intercom.
 
-## 项目界面预览
+## Project interface preview
 
-### 1. 首页
+### 1. Home
 
 ![landing page](doc/images/landing_page.jpg)
 
-### 2. 订购计划和价格页
+### 2. Order plan and price page
 
 ![plan and price](doc/images/plan_and_price.jpg)
 
-### 3. 登录页
+### 3. Login page
 
 ![login page](doc/images/login_page.jpg)
 
-### 4. 雇员账户管理SPA单页应用
+### 4. Employee Account Management SPA Single Page Application
 
 ![account edit page](doc/images/account_edit_page.jpg)
 
-### 5. 我的公司SPA单页应用
+### 5. My company SPA single page application
 
 ![scheduling page](doc/images/scheduling_page.jpg)
 
 
-## 其它可供参考微服务案例项目
+## Other reference microservice case projects
 
-* [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 微软支持
-* [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) 谷歌支持
+* [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) Microsoft support
+* [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) Google support
 * [piggy-metrics](https://github.com/sqshq/piggymetrics)

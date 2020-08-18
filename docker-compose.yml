@@ -1,31 +1,9 @@
 version: '3.7'
 
 services:
-  planner_account_mysql:
-    image: mysql:latest
-    environment:
-     MYSQL_ROOT_PASSWORD: root
-     MYSQL_USER: planner
-     MYSQL_PASSWORD: planner
-     MYSQL_DATABASE: planner_account
-    ports:
-      - "3307:3306"
-    networks:
-      - external_access
-  planner_company_mysql:
-    image: mysql:latest
-    environment:
-     MYSQL_ROOT_PASSWORD: root
-     MYSQL_USER: planner
-     MYSQL_PASSWORD: planner
-     MYSQL_DATABASE: planner_company
-    ports:
-      - "3308:3306"
-    networks:
-      - external_access
   account-service:
     build: ./account-svc
-    image: planner/account-svc
+    image: account-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -36,19 +14,18 @@ services:
       - BOT_SERVICE_ENDPOINT
       - INTERCOM_ACCESS_TOKEN
       - ACCOUNT_DATASOURCE_URL
-      - ACCOUNT_DATASOURCE_USERNAME=planner
-      - ACCOUNT_DATASOURCE_PASSWORD=planner
+      - ACCOUNT_DATASOURCE_USERNAME
+      - ACCOUNT_DATASOURCE_PASSWORD
     depends_on:
       - bot-service
       - email-service
-      - planner_account_mysql
     networks:
       - internal_access
       - external_access # db access
 
   company-service:
     build: ./company-svc
-    image: planner/company-svc
+    image: company-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -58,19 +35,18 @@ services:
       - ACCOUNT_SERVICE_ENDPOINT
       - BOT_SERVICE_ENDPOINT
       - COMPANY_DATASOURCE_URL
-      - COMPANY_DATASOURCE_USERNAME=planner
-      - COMPANY_DATASOURCE_PASSWORD=planner
+      - COMPANY_DATASOURCE_USERNAME
+      - COMPANY_DATASOURCE_PASSWORD
     depends_on:
       - bot-service
       - email-service
-      - planner_company_mysql
     networks:
       - internal_access
       - external_access # db access
 
   bot-service:
     build: ./bot-svc
-    image: planner/bot-svc
+    image: bot-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -87,7 +63,7 @@ services:
 
   email-service:
     build: ./mail-svc
-    image: planner/mail-svc
+    image: mail-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -107,7 +83,7 @@ services:
 
   whoami-service:
     build: ./whoami-svc
-    image: planner/whoami-svc
+    image: whoami-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -133,9 +109,9 @@ services:
 
   www-service:
     build: ./web-app
-    image: planner/www-svc
+    image: www-svc
     ports:
-      - 8086:80
+      - 81:80
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -156,7 +132,7 @@ services:
 
   faraday-service:
     build: ./faraday
-    image: planner/faraday-svc
+    image: faraday-svc
     ports:
       - 80:80
     environment:
@@ -181,7 +157,7 @@ services:
     build:
       context: ./frontend
       dockerfile: myaccount/Dockerfile
-    image: planner/myaccount-spa
+    image: myaccount-spa
     networks:
       - internal_access
 
@@ -189,7 +165,7 @@ services:
     build:
       context: ./frontend
       dockerfile: app/Dockerfile
-    image: planner/app-spa
+    image: app-spa
     networks:
       - internal_access
 

@@ -12,8 +12,9 @@ spring:
     tomcat:
       test-while-idle: true
       validation-query: SELECT 1
+    driverClassName: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: validate
 
